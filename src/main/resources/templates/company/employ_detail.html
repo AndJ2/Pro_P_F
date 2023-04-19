@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact - Moderna Bootstrap Template</title>
+  <title>Employ_detail</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -39,48 +39,34 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center ">
-    <div class="container d-flex justify-content-between align-items-center">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <div class="container d-flex justify-content-between align-items-center">
 
-      <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="" href="/static">Home</a></li>
-          <li><a href="scrap">Scrap</a></li>
-          <li><a href="employ">Employ</a></li>
-          <li><a href="posting">Portfolio</a></li>
-          <li><a href="#">Null</a></li>
-          <li><a class="active" href="community">Community</a></li>
-          <li class="dropdown"><a href="#"><span>Null</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a href="employ_detail">employ_detail</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+    <div class="logo">
+      <h1 class="text-light"><a href="/"><span>Pro P.F</span></a></h1>
     </div>
-  </header><!-- End Header -->
+
+    <nav id="navbar" class="navbar">
+      <form action="" method="post">
+        <input type="text">
+        <button type="submit"><i class="bi bi-search"></i></button>
+      </form>
+      <ul>
+        <li><a href="employ">공고</a></li>
+        <li><a href="post">포스팅</a></li>
+        <li><a href="com">커뮤니티</a></li>
+        <li><a href="#">기업채널</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <ul>
+      <li><a href="scrap"><i class="bi bi-bookmarks-fill"></i></a>
+        <a href="pofo"><i class="bi bi-person-circle"></i></a></li>
+    </ul>
+  </div>
+</header><!-- End Header -->
+
 
   <main id="main">
 
@@ -91,7 +77,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Contact</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/static">Home</a></li>
             <li>Contact</li>
           </ol>
         </div>
@@ -104,143 +90,90 @@
       <div class="container">
 
         <div class="row">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <h2>채용 공고</h2>
-              </div><hr class="job_sun"><br>
 
-              <div class="row job_sub">
-                <div class="col-md-1 form-group job_name">
-                  <h4>제목</h4>
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-10">
+                <div class="entry-img">
+                  <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
                 </div>
-                <div class="col-md-10 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="#" method="post" role="form" class="php-email-form">
+              <div class="row job_color">
+                <div class="col-md-6 form-group">
+                  <h5>기업형태</h5>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <h5>접수기간</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  대기업
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  23.4.14 ~ 모집시 마감
                 </div>
               </div><br>
-
+              <div class="row job_color">
+                <div class="col-md-6 form-group">
+                  <h5>모집 직무</h5>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <h5>채용인원</h5>
+                </div>
+              </div>
               <div class="row">
-                <div class="col-md-1">
-                  <h5>모집직무</h5>
+                <div class="col-md-6 form-group">
+                  마케팅 / 광고 / 홍보
                 </div>
-                <div class="col-md-5">
-                  <select class="job_sel">
-                    <option value="frontend">프론트 엔드</option>
-                    <option value="backend">백엔드</option>
-                    <option value="ios">ios</option>
-                  </select>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  1명
                 </div>
-                <div class="col-md-1">
+              </div><br>
+              <div class="row job_color">
+                <div class="col-md-6 form-group">
                   <h5>채용형태</h5>
                 </div>
-                <div class="col-md-5">
-                  <select class="job_sel">
-                    <option value="frontend">정규직</option>
-                    <option value="backend">인턴</option>
-                    <option value="ios">경력직</option>
-                  </select>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <h5>홈페이지</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  인턴
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <a href="#">회사 홈피 링크</a>
                 </div>
               </div><br>
-
-              <div class="row">
-                <div class="col-md-1">
-                  <h5>채용 인원</h5>
-                </div>
-                <div class="col-md-3">
-                  <input type="text" name="num" class="form-control" id="num" required>
-                </div>
-                <div class="col-md-2">
-                  <h5>명</h5>
-                </div>
-                <div class="col-md-1">
+                <div class="row job_color">
+                  <div class="col-md-6 form-group">
                   <h5>근무지역</h5>
                 </div>
-                <div class="col-md-5">
-                  <select class="job_sel">
-                    <option value="frontend">서울</option>
-                    <option value="backend">부산</option>
-                    <option value="ios">대구</option>
-                  </select>
-                </div>
-              </div><br>
-
-              <div class="row">
-                <div class="col-md-1">
-                  <h5>모집 기간</h5>
-                </div>
-                <div class="col-md-4">
-                  <input type="date" name="s_date" class="form-control" id="s_date" required>
-                </div>
-                <div class="col-md-2 job_name">
-                  <h5>~</h5>
-                </div>
-                <div class="col-md-4">
-                  <input type="date" name="e_date" class="form-control" id="e_date" required>
-                </div>
-              </div><br>
-
-              <div class="row">
-                <div class="col-md-1">
-                  <h5> 공고 내용</h5>
-                </div>
-                <div class="col-md-11">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
-                </div>
-              </div><hr><br><br>
-
-              <div class="row">
-                <h2>담당자 정보</h2>
-              </div><hr class="job_sun"><br>
-
-              <div class="row">
-                <div class="col-md-1 form-group job_name">
-                  <h4>담당자</h4>
-                </div>
-                <div class="col-md-10 form-group">
-                  <input type="text" name="ad_name" class="form-control" id="ad_name" placeholder="Your Name" required>
-                </div>
-              </div><br>
-
-              <div class="row job_sub">
-                <div class="col-md-1 form-group job_name">
-                  <h4>연락처</h4>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1 form-group job_name">
-                  <h5>전화번호</h5>
-                </div>
-                <div class="col-md-3 form-group">
-                  <input type="text" name="ad_phone1" class="form-control" id="ad_phone1" placeholder="021234567" required>
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1 form-group job_name">
-                  <h5>휴대폰</h5>
-                </div>
-                <div class="col-md-3 form-group">
-                  <input type="text" name="ad_phone1" class="form-control" id="ad_phone2" placeholder="01012345678" required>
-                </div>
-              </div><br>
-
-              <div class="row job_sub">
-                <div class="col-md-1 form-group job_name">
-                </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1 form-group job_name">
-                  <h5>E-mail</h5>
-                </div>
-                <div class="col-md-3 form-group">
-                  <input type="text" name="ad_phone1" class="form-control" id="ad_email" placeholder="hong@naver.com" required>
-                </div>
-                <div class="col-md-1"></div>
-
-              </div><br>
-
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">공고 등록</button></div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  해외
+                </div>
+              </div><br>
+              <div class="row job_color">
+                <div class="col-md-6 form-group">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <button type="submit">스크랩</button>
+                  <button type="submit">지원하기</button>
+                </div>
+              </div>
             </form>
+          </div>
+
         </div>
 
       </div>

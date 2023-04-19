@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact - Moderna Bootstrap Template</title>
+  <title>Portfolio - Moderna Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -35,109 +35,148 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>LESH | custom profile</title>
 </head>
 
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center ">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
   <div class="container d-flex justify-content-between align-items-center">
 
     <div class="logo">
-      <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="text-light"><a href="/"><span>Pro P.F</span></a></h1>
     </div>
 
     <nav id="navbar" class="navbar">
+      <form action="" method="post">
+        <input type="text">
+        <button type="submit"><i class="bi bi-search"></i></button>
+      </form>
       <ul>
-        <li><a class="" href="index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="../team.html">Team</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li>
-        <li><a class="active" href="contact.html">Contact Us</a></li>
+        <li><a href="employ">공고</a></li>
+        <li><a href="post">포스팅</a></li>
+        <li><a href="com">커뮤니티</a></li>
+        <li><a href="#">기업채널</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
-
+    <ul>
+      <li><a href="scrap"><i class="bi bi-bookmarks-fill"></i></a>
+        <a href="pofo"><i class="bi bi-person-circle"></i></a></li>
+    </ul>
   </div>
 </header><!-- End Header -->
 
 <main id="main">
 
-  <!-- ======= Contact Section ======= -->
+  <!-- ======= Our Portfolio Section ======= -->
   <section class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Contact</h2>
+        <h2>My Page</h2>
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Contact</li>
+          <li><a href="../home/index.html">Home</a></li>
+          <li>My Page</li>
         </ol>
       </div>
 
     </div>
-  </section><!-- End Contact Section -->
+  </section><!-- End Our Portfolio Section -->
 
-  <!-- ======= Contact Section ======= -->
-  <section class="contact" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-    <div class="container">
+  <!--마이페이지 글작성-->
+  <div class="container">
 
-      <div class="row">
+    <div class="profile">
 
+      <div class="profile-image">
 
-        <div class="col-lg-6">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <!-- 아이디 -->
-              <div class="col-lg-12">
-                <h5>아이디</h5>
-              </div>
-              <div class="col-md-6 form-group mt-12">
-                <input type="text" name="id" class="form-control" id="id" placeholder="아이디 입력" required>
-                <br>
-              </div>
+        <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
 
-              <!-- 닉네임 -->
-              <div class="col-lg-12">
-                <h5>닉네임</h5>
-              </div>
-              <div class="col-md-6 form-group mt-12">
-                <input type="text" name="nickname" class="form-control" id="nickname" placeholder="닉네임 입력" required>
-              </div>
+      </div>
 
-              <div class="my-3"></div>
-              <div class="text-center"><button type="submit">로그인</button></div>
-          </form>
-        </div>
+      <div class="profile-user-settings">
+
+        <h1 class="profile-user-name">회사명</h1>
+
+      </div>
+
+      <div class="profile-stats">
+
+        <ul>
+          <h3>팔로워 :</h3>
+        </ul>
 
       </div>
 
     </div>
-  </section><!-- End Contact Section -->
+  </div>
+  <!-- End of profile section -->
 
-  <!-- ======= Map Section ======= -->
+  <div class="tabs">
+    <input id="all" type="radio" name="ctab_item" checked>
+    <label class="ctab_item" for="all">소개</label>
+    <input id="programming" type="radio" name="ctab_item">
+    <label class="ctab_item" for="programming">공고</label>
 
+    <div class="tab_content" id="all_content">
+
+      기업 페이지 소개 입니다.
+
+    </div>
+
+    <div class="tab_content" id="programming_content">
+      <section class="about" data-aos="fade-up">
+        <div class="container">
+
+          <table class="ui celled  table">
+            <thead>
+            <tr>
+              <th>공고명</th>
+              <th>채용형태</th>
+              <th>기업명</th>
+              <th>근무지역</th>
+              <th>마감일</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>IOS 개발자 구함둥</td>
+              <td>경력 </td>
+              <td>카카오</td>
+              <td>서울</td>
+              <td>~ 4/30</td>
+              <th>
+                <div class="text-center">
+                  <button type="submit">수정</button>
+                  <button type="submit">삭제</button>
+                </div>
+              </th>
+            </tr>
+            </tbody>
+          </table>
+          <section class="blog">
+            <div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
+          </section>
+
+
+        </div>
+      </section>
+
+    </div>
+
+  </div>
 
 </main><!-- End #main -->
 
