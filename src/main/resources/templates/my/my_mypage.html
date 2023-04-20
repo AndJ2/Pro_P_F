@@ -43,7 +43,7 @@
 
 <body>
 
-<!-- ======= Header ======= -->
+
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
   <div class="container d-flex justify-content-between align-items-center">
 
@@ -71,6 +71,7 @@
   </div>
 </header><!-- End Header -->
 
+
 <main id="main">
 
   <!-- ======= Our Portfolio Section ======= -->
@@ -80,7 +81,7 @@
       <div class="d-flex justify-content-between align-items-center">
         <h2>My Page</h2>
         <ol>
-          <li><a href="../home/index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li>My Page</li>
         </ol>
       </div>
@@ -128,14 +129,9 @@
     <label class="tab_item" for="design">소개</label>
     <div class="tab_content" id="all_content">
       <div class="col-lg-6">
-        <div class="sidebar">
-          <h5 class="sidebar-title">검색</h5>
-          <div class="sidebar-item search-form">
-            <form action="">
-              <input type="text">
-              <button type="submit"><i class="bi bi-search"></i></button>
-            </form>
-          </div>
+        <div class="search123 category">
+          <input type="text" placeholder="검색어 입력">
+          <a href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
         </div>
       </div>
       <!-- End sidebar search formn-->
@@ -154,14 +150,14 @@
                 </div>
 
                 <h2 class="entry-title">
-                  <a href="../X/blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                  <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
                 </h2>
 
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="../X/blog-single.html">John Doe</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="../X/blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="../X/blog-single.html">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
                   </ul>
                 </div>
 
@@ -171,7 +167,7 @@
                     Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
                   </p>
                   <div class="read-more">
-                    <a href="../X/blog-single.html">Read More</a>
+                    <a href="blog-single.html">Read More</a>
                   </div>
                 </div>
 
@@ -184,21 +180,22 @@
     </div>
 
     <div class="tab_content" id="programming_content">
-      <section class="seciton-1 con-min-width">
-        <div class="con">
-          <div class="img-list-box">
-            <ul class="inline-grid">
-              <li style="background-image:url(https://picsum.photos/id/101/300/500);"></li>
-              <li style="background-image:url(https://picsum.photos/id/102/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/103/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/104/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/111/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/106/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/107/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/108/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/109/500/700);"></li>
-              <li style="background-image:url(https://picsum.photos/id/110/500/700);"></li>
-            </ul>
+      <section class="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon-box icon-box-pink">
+                <img src="assets/img/blog/blog-1.jpg" alt="blog" width="245" height="200"/>
+                <h4 class="title"><a href="">토이 프로젝트 모음 zip</a></h4>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-lg-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon-box icon-box-cyan">
+                <img src="assets/img/blog/blog-1.jpg" alt="blog" width="245" height="200"/>
+                <h4 class="title"><a href="">MEVEN</a></h4>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -208,7 +205,6 @@
       <button class="btn intro-btn">소개 작성하기</button>
     </div>
   </div>
-
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->

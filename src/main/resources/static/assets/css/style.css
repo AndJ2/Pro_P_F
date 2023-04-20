@@ -331,22 +331,7 @@ h6,
   display: block;
 }
 
-/*header 사용자 아이콘*/
-.bi-person-circle {
-  color: #ffffff;
-  font-size: 30px;
-}
-/*header 스크랩 아이콘*/
-.bi-bookmarks-fill {
-  color: #ffffff;
-  font-size: 30px;
-}
-.like-post{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 
-}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -1276,291 +1261,6 @@ section {
     max-width: 100%;
     margin: 0 auto 30px auto;
   }
-}
-
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-/*.portfolio {*/
-/*  padding-bottom: 60px;*/
-/*}*/
-
-/*profile*/
-.profile {
-  padding: 5rem 0;
-}
-
-.profile::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.profile-image {
-  float: left;
-  width: calc(33.333% - 1rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 3rem;
-}
-
-.profile-image img {
-  border-radius: 50%;
-}
-
-.profile-user-settings,
-.profile-stats,
-.profile-bio {
-  float: left;
-  width: calc(66.666% - 2rem);
-}
-
-.profile-user-name {
-  display: inline-block;
-  font-size: 3.2rem;
-  font-weight: 300;
-  color: black;
-}
-
-.profile-edit-btn {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  border: 0.1rem solid #dbdbdb;
-  border-radius: 0.3rem;
-  padding: 0 2.4rem;
-  margin-left: 2rem;
-}
-
-.profile-settings-btn {
-  font-size: 2rem;
-  margin-left: 1rem;
-}
-
-.profile-stats {
-  margin-top: 2.3rem;
-}
-
-.profile-stats li {
-  display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  margin-right: 4rem;
-  cursor: pointer;
-  color: black;
-}
-
-.profile-stats li:last-of-type {
-  margin-right: 0;
-}
-
-.profile-real-name,
-.profile-stat-count,
-.profile-edit-btn {
-  font-weight: 600;
-}
-
-/* 탭 전체 스타일 */
-.tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 800px;
-  margin: 0 auto;}
-
-/* 탭 스타일 */
-.tab_item {
-  width: calc(100%/3);
-  height: 50px;
-  border-bottom: 3px solid #333333;
-  background-color: #f8f8f8;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #333333;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-.tab_item:hover {
-  opacity: 0.75;
-}
-
-/* 라디오 버튼 UI삭제*/
-input[name="tab_item"] {
-  display: none;
-}
-
-/* 탭 컨텐츠 스타일 */
-.tab_content {
-  display: none;
-  padding: 40px 40px 0;
-  clear: both;
-  overflow: hidden;
-}
-
-
-/* 선택 된 탭 콘텐츠를 표시 */
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
-  display: block;
-}
-
-/* 선택된 탭 스타일 */
-.tabs input:checked + .tab_item {
-  background-color: #333333;
-  color: #fff;
-}
-
-/* 기업 마이페이지 탭 스타일 */
-/* 탭 전체 스타일 */
-.tabs {
-  margin-top: 50px;
-  padding-bottom: 40px;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 800px;
-  margin: 0 auto;}
-
-.ctab_item {
-  width: calc(100%/2);
-  height: 50px;
-  border-bottom: 3px solid #333333;
-  background-color: #f8f8f8;
-  line-height: 50px;
-  font-size: 16px;
-  text-align: center;
-  color: #333333;
-  display: block;
-  float: left;
-  text-align: center;
-  font-weight: bold;
-  transition: all 0.2s ease;
-}
-.ctab_item:hover {
-  opacity: 0.75;
-}
-
-/* 라디오 버튼 UI삭제*/
-input[name="ctab_item"] {
-  display: none;
-}
-
-/* 탭 컨텐츠 스타일 */
-.tab_content {
-  display: none;
-  padding: 40px 40px 0;
-  clear: both;
-  overflow: hidden;
-}
-
-
-/* 선택 된 탭 콘텐츠를 표시 */
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content {
-  display: block;
-}
-
-/* 선택된 탭 스타일 */
-.tabs input:checked + .ctab_item {
-  background-color: #333333;
-  color: #fff;
-}
-
-/*시리즈 CSS*/
-/*노말라이즈 시작*/
-body, ul, li {
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-a {
-  color:inherit;
-  text-decoration:none;
-}
-/*노말라이즈 끝*/
-
-/*라이브러리 시작*/
-.con {
-  margin-right:auto;
-  margin-left:auto;
-}
-
-.img-box > img {
-  width:100%;
-  display:block;
-}
-
-.inline-grid {
-  font-size:0;
-}
-
-.inline-grid > * {
-  font-size:1rem;
-  display:inline-block;
-  vertical-align:top;
-}
-/*라이브러리 끝*/
-
-/*커스텀 시작*/
-:root {
-  --site-width:아이콘px;
-}
-
-.con {
-  width:var(--site-width);
-}
-
-.con-min-width {
-  min-width:var(--site-width);
-  padding:0 10px;
-}
-
-/* body {
-  background-color: #e2e1e0;
-} */
-
-.img-list-box > ul > li {
-  width:calc((var(--site-width) - 20px * 2) / 2);
-  background-position:center;
-  background-size:cover;
-  /*background-repeat:none;*/
-  margin-top:40px;
-  box-shadow:0 1px 2px rgba(0,0,0,0.3),
-  0 1px 3px rgba(0,0,0,0.15);
-  transition:box-shadow 1s;
-}
-
-.img-list-box > ul > li:hover{
-  box-shadow:0 10px 10px rgba(0,0,0,0.3),
-  0 14px 28px rgba(0,0,0,0.3);
-}
-
-.img-list-box > ul > li::after {
-  content:"";
-  display:block;
-  padding-top:70%;
-}
-
-.img-list-box > ul > li:not(:nth-child(2n)){
-  margin-right:40px;
-}
-
-/*커스텀 끝*/
-
-/*소개 작성하기 버튼 CSS */
-.intro-btn {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  border: 0.1rem solid #68A4C4;
-  border-radius: 0.3rem;
-  padding: 0 2.4rem;
-  margin-left: 15rem;
 }
 
 /*--------------------------------------------------------------
@@ -2533,6 +2233,219 @@ a {
 #footer .credits a {
   color: #a2cce3;
 }
+/*강찬미===========================================================================================================*/
+/*header 사용자 아이콘*/
+.bi-person-circle {
+  color: #ffffff;
+  font-size: 30px;
+}
+/*header 스크랩 아이콘*/
+.bi-bookmarks-fill {
+  color: #ffffff;
+  font-size: 30px;
+}
+.like-post{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/*포트폴리오 프로필 CSS*/
+/*  padding-bottom: 60px;*/
+/*}*/
+
+/*profile*/
+.profile {
+  padding: 5rem 0;
+}
+
+.profile::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.profile-image {
+  float: left;
+  width: calc(33.333% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+  float: left;
+  width: calc(66.666% - 2rem);
+}
+
+.profile-user-name {
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: black;
+}
+
+.profile-edit-btn {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  border: 0.1rem solid #dbdbdb;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+  margin-left: 2rem;
+}
+
+.profile-stats {
+  margin-top: 2.3rem;
+}
+
+.profile-stats li {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-right: 4rem;
+  cursor: pointer;
+  color: black;
+}
+
+.profile-stats li:last-of-type {
+  margin-right: 0;
+}
+
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+  font-weight: 600;
+}
+
+/* 탭 전체 스타일 */
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  margin: 0 auto;}
+
+/* 탭 스타일 */
+.tab_item {
+  width: calc(100%/3);
+  height: 50px;
+  border-bottom: 3px solid #333333;
+  background-color: #f8f8f8;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #333333;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/* 라디오 버튼 UI삭제*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/* 탭 컨텐츠 스타일 */
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/* 선택 된 탭 콘텐츠를 표시 */
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+
+/* 선택된 탭 스타일 */
+.tabs input:checked + .tab_item {
+  background-color: #333333;
+  color: #fff;
+}
+
+/* 기업 마이페이지 탭 스타일 */
+/* 탭 전체 스타일 */
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 800px;
+  margin: 0 auto;}
+
+.ctab_item {
+  width: calc(100%/2);
+  height: 50px;
+  border-bottom: 3px solid #333333;
+  background-color: #f8f8f8;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #333333;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.ctab_item:hover {
+  opacity: 0.75;
+}
+
+/* 라디오 버튼 UI삭제*/
+input[name="ctab_item"] {
+  display: none;
+}
+
+/* 탭 컨텐츠 스타일 */
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/* 선택 된 탭 콘텐츠를 표시 */
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content {
+  display: block;
+}
+
+/* 선택된 탭 스타일 */
+.tabs input:checked + .ctab_item {
+  background-color: #333333;
+  color: #fff;
+}
+
+
+/*소개 작성하기 버튼 CSS */
+.intro-btn {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  border: 0.1rem solid #68A4C4;
+  border-radius: 0.3rem;
+  padding: 0 2.4rem;
+  margin-left: 15rem;
+}
 
 /* upload CSS */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
@@ -2675,6 +2588,7 @@ a {
   height: 420px;
 }
 
+/*==================================================================================================================*/
 /* 신예희 ---------------------------------------------------------------------------------------------------------------*/
 .search123 {
   position: relative;
