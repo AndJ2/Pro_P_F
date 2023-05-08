@@ -20,4 +20,10 @@ public class HomeController {
     public String login(Model model) {
         return "home/login";
     }
+
+    @GetMapping("/wait2")
+    public String wait2(Model model) {
+        return "X/about";
+    }
+
 }
