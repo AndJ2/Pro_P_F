@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Community</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css?after" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" style="background-color: #1e4356">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <div class="logo">
+      <h1 class="text-light"><a href="/"><span>Pro P.F</span></a></h1>
+    </div>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="employ">공고</a></li>
+        <li><a href="post">포스팅</a></li>
+        <li><a href="com">커뮤니티</a></li>
+        <li><a href="com">기업채널</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <ul>
+      <li><a href="scrap"><i class="bi bi-bookmarks-fill"></i></a>
+        <a href="pofo"><i class="bi bi-person-circle"></i></a></li>
+    </ul>
+  </div>
+</header><!-- End Header -->
+
+<main id="main">
+
+  <!-- ======= Blog Section ======= -->
+  <section class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>커뮤니티</h2>
+
+        <ol>
+          <li><a href="../home/index.html">Home</a></li>
+          <li>Community</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Blog Section -->
+
+  <!-- ======= Blog Section ======= -->
+  <style>
+    .entries {
+      margin-top: 0; /* 기존의 margin-top 제거 */
+    }
+
+    .blog .row {
+      display: flex; /* flexbox 사용 */
+      align-items: flex-start; /* 아이템들을 시작점 기준으로 정렬 */
+    }
+
+    .col-lg-3 {
+      height: 100%; /* 높이 100% 설정 */
+    }
+
+    .sidebar {
+      height: 100%; /* 높이 100% 설정 */
+      margin-right: 30px; /* 오른쪽 마진 추가 */
+    }
+
+    .con {
+      margin-top: 0; /* 기존의 margin-top 제거 */
+      margin-bottom: 30px; /* 하단 마진 추가 */
+    }
+    a {
+      color: black;
+    }
+  </style>
+  <!--  table css-->
+  <style>
+    .table {
+      border: none;
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .table th,
+    .table td {
+      border: none;
+      padding: 8px;
+    }
+
+    .table th {
+      background-color: #f2f2f2;
+    }
+
+    .table tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    .table a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .table a:hover {
+      color: #00b3ff;
+    }
+
+    .article-list.con {
+      position: relative;
+      text-align: right; /* 버튼을 오른쪽으로 이동시키기 위해 추가 */
+    }
+
+    .btn-create {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #999;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: all 0.2s ease-in-out; /* 마우스 오버 효과를 위한 CSS */
+    }
+
+    .btn-create:hover {
+      background-color: #777;
+      color: #ddd;
+    }
+    .btn-create:active {
+      background-color: #7d7d7d;
+      color: #ccc;
+    }
+
+  </style>
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="sidebar">
+            <h3 class="sidebar-title">커뮤니티 게시판</h3>
+            <div class="sidebar-item categories">
+              <ul>
+                <li><a href="#">전체 게시판 <span>(0)</span></a></li>
+                <li><a href="#">자유 게시판 <span>(0)</span></a></li>
+                <li><a href="#">취준 게시판 <span>(0)</span></a></li>
+                <li><a href="#">인턴 게시판 <span>(0)</span></a></li>
+                <li><a href="#">대학 게시판 <span>(0)</span></a></li>
+              </ul>
+            </div><!-- End sidebar categories-->
+          </div><!-- End sidebar -->
+        </div><!-- End blog sidebar -->
+
+        <div class="col-lg-9 entries">
+
+          <section class="article-list table-common con">
+            <div class="table-responsive">
+              <a href="#" class="btn-create">글 작성하기</a>
+              <table class="table">
+                <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>제목</th>
+                  <th>게시판명</th>
+                  <th>글쓴이</th>
+                  <th>등록일</th>
+                  <th>조회</th>
+                  <th>추천</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><a href="#">예시 제목 1</a></td>
+                  <td><a href="#">예시 게시판명 1</a></td>
+                  <td>예시 글쓴이 1</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><a href="#">예시 제목 2</a></td>
+                  <td><a href="#">예시 게시판명 2</a></td>
+                  <td>예시 글쓴이 2</td>
+                  <td>2022-01-01</td>
+                  <td>200</td>
+                <td>30</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><a href="#">예시 제목 3</a></td>
+                  <td><a href="#">예시 게시판명 3</a></td>
+                  <td>예시 글쓴이 3</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><a href="#">예시 제목 4</a></td>
+                  <td><a href="#">예시 게시판명 4</a></td>
+                  <td>예시 글쓴이 4</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><a href="#">예시 제목 5</a></td>
+                  <td><a href="#">예시 게시판명 5</a></td>
+                  <td>예시 글쓴이 5</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td><a href="#">예시 제목 6</a></td>
+                  <td><a href="#">예시 게시판명 6</a></td>
+                  <td>예시 글쓴이 6</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td><a href="#">예시 제목 7</a></td>
+                  <td><a href="#">예시 게시판명 7</a></td>
+                  <td>예시 글쓴이 7</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td><a href="#">예시 제목 8</a></td>
+                  <td><a href="#">예시 게시판명 8</a></td>
+                  <td>예시 글쓴이 8</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td><a href="#">예시 제목 9</a></td>
+                  <td><a href="#">예시 게시판명 9</a></td>
+                  <td>예시 글쓴이 9</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td><a href="#">예시 제목 10</a></td>
+                  <td><a href="#">예시 게시판명 10</a></td>
+                  <td>예시 글쓴이 10</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td><a href="#">예시 제목 11</a></td>
+                  <td><a href="#">예시 게시판명 11</a></td>
+                  <td>예시 글쓴이 11</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td><a href="#">예시 제목 12</a></td>
+                  <td><a href="#">예시 게시판명 12</a></td>
+                  <td>예시 글쓴이 12</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td><a href="#">예시 제목 13</a></td>
+                  <td><a href="#">예시 게시판명 13</a></td>
+                  <td>예시 글쓴이 13</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td><a href="#">예시 제목 14</a></td>
+                  <td><a href="#">예시 게시판명 14</a></td>
+                  <td>예시 글쓴이 14</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td><a href="#">예시 제목 15</a></td>
+                  <td><a href="#">예시 게시판명 15</a></td>
+                  <td>예시 글쓴이 15</td>
+                  <td>2022-01-01</td>
+                  <td>100</td>
+                  <td>20</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="blog-pagination">
+            <ul class="justify-content-center">
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section><!-- End Blog Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h4>Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+        </div>
+        <div class="col-lg-6">
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-info">
+          <h3>About Moderna</h3>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
