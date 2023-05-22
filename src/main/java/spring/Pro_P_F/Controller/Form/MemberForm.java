@@ -1,4 +1,4 @@
-package spring.Pro_P_F.Controller;
+package spring.Pro_P_F.Controller.Form;
 
 import lombok.Getter;
 import lombok.Setter;

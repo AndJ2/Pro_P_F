@@ -1,4 +1,4 @@
-package spring.Pro_P_F.Controller;
+package spring.Pro_P_F.Controller.PageMove;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
