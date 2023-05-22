@@ -54,6 +54,8 @@ public class MyController {
         return "my/upload";
     }
 
+
+    // test 회원가입 성공 코드
     @PostMapping("/test")
     public String testForm(MemberForm form) {
         Member member = new Member();

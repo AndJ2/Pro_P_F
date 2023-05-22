@@ -19,10 +19,8 @@ public class Member {
     @Column(unique = true)
     private String m_phone;
 
-    @Column(unique = true)
     private String m_email;
 
-    @Column(unique = true)
     private String m_git;
 
     public String getM_id() {
