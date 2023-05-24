@@ -6,13 +6,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.Pro_P_F.Controller.Form.CommunityForm;
-import spring.Pro_P_F.Controller.Form.MemberForm;
 import spring.Pro_P_F.domain.Community;
-import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.service.CommunityService;
-import spring.Pro_P_F.service.MemberService;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class CommunityController {
@@ -35,8 +33,16 @@ public class CommunityController {
         community.setC_category(form.getCategory());
         community.setC_date(LocalDate.now());
 
+
         communityService.save(community);
-        return "redirect:/";
+        return "my/community";
+    }
+
+    @GetMapping("/com")
+    public String list(Model model) {
+        List<Community> communities = communityService.findAllComm();
+        model.addAttribute("communities", communities);
+        return "my/community";
     }
     
 }

@@ -8,8 +8,11 @@ import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.repository.CommunityRepository;
 import spring.Pro_P_F.repository.MemberRepository;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class CommunityService {
     private final CommunityRepository communityRepository;
 
@@ -20,4 +23,10 @@ public class CommunityService {
 
         return community.getC_seq();
     }
+
+    public List<Community> findAllComm() {
+        return communityRepository.findAll();
+    }
+
+
 }

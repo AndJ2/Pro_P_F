@@ -15,11 +15,6 @@ public class MyController {
     @Autowired
     private MemberService memberService;
 
-    @GetMapping("/com")
-    public String Com(Model model) {
-        return "my/community";
-    }
-
     @GetMapping("/scrap")
     public String Scrap(Model model) {
         return "my/scrap";

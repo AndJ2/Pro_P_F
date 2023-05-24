@@ -26,4 +26,6 @@ public class Community {
 
     @LastModifiedDate
     private LocalDate c_date;
+
+
 }
