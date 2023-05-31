@@ -19,7 +19,7 @@ public class CommunityController {
     private CommunityService communityService;
 
     @GetMapping("/com_add")
-    public String test(Model model) {
+    public String com_add(Model model) {
         model.addAttribute("communityForm", new CommunityForm());
         return "my/com_add";
     }
@@ -27,7 +27,7 @@ public class CommunityController {
     @PostMapping("/com_add")
     public String communityForm(CommunityForm form) {
         Community community = new Community();
-        
+
         community.setC_title(form.getTitle());
         community.setC_content(form.getContent());
         community.setC_category(form.getCategory());

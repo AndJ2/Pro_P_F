@@ -86,7 +86,7 @@
       <div class="container">
 
         <div class="row">
-          <form action="com_add" method="post" th:object="${communityForm}" role="form" class="php-email-form">
+          <form action="com_add" method="post" th:object="${communityForm}" role="form">
               <input type="hidden" th:field="*{date}" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" />
             <div class="row">
               <div class="col-md-1 form-group job_name">
@@ -116,9 +116,8 @@
             </div><hr><br>
 
             <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+<!--              <div class="loading">Loading</div>-->
+<!--              <div class="error-message"></div>-->
             </div>
             <div class="text-center"><button type="submit">공고 등록</button></div>
           </form>

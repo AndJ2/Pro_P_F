@@ -11,10 +11,10 @@ public class HomeController {
         return "home/index";
     }
 
-    @GetMapping("/join")
-    public String contact(Model model) {
-        return "home/join";
-    }
+//    @GetMapping("/join")
+//    public String contact(Model model) {
+//        return "home/join";
+//    }
 
     @GetMapping("/login")
     public String login(Model model) {
