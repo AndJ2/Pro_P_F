@@ -50,9 +50,15 @@ public class MemberController {
 
     @PostMapping("/login")
     public String loginId(MemberForm form, HttpSession session) {
-        String mId = form.getM_id();
-        session.setAttribute("m_id", mId);
-        return "redirect:/";
+        Member test = memberService.findOne(form.getM_id());
+        if (test == null) {
+            throw new IllegalArgumentException("존재하지 않는 id입니다");
+        } else {
+            String mId = form.getM_id();
+            session.setAttribute("m_id", mId);
+
+            return "redirect:/";
+        }
     }
 
     @GetMapping("/")
