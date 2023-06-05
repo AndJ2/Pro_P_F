@@ -50,7 +50,7 @@ public class MemberController {
 
     @PostMapping("/login")
     public String loginId(MemberForm form, HttpSession session) {
-        String mId = memberService.findOne(form.getM_id());
+        String mId = form.getM_id();
         session.setAttribute("m_id", mId);
         return "redirect:/";
     }
