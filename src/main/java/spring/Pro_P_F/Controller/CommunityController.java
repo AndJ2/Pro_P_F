@@ -9,6 +9,7 @@ import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.service.CommunityService;
 
+import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,13 +20,17 @@ public class CommunityController {
     private CommunityService communityService;
 
     @GetMapping("/com_add")
-    public String com_add(Model model) {
+    public String com_add(Model model, HttpSession session) {
+        String mId = (String) session.getAttribute("m_id");
+        System.out.println("이걸 지났다네~~" + mId);
+
         model.addAttribute("communityForm", new CommunityForm());
         return "my/com_add";
     }
     
     @PostMapping("/com_add")
     public String communityForm(CommunityForm form) {
+
         Community community = new Community();
 
         community.setC_title(form.getTitle());

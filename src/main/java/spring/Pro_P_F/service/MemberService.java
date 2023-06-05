@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class MemberService {
 
     private final MemberRepository memberRepository;
@@ -21,4 +22,18 @@ public class MemberService {
 
         return member.getM_id();
     }
+
+    public String findOne(String memberId) {
+        Member mem = new Member();
+        mem = memberRepository.findOne(memberId);
+
+        if(mem == null) {
+            throw new Error("존재하지 않는 id입니다");
+        } else {
+            return mem.getM_id();
+        }
+    }
+
+
+
 }

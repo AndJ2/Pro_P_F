@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.Controller.Form.MemberForm;
@@ -11,6 +12,7 @@ import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.service.MemberService;
 
+import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
 
 @Controller
@@ -39,4 +41,27 @@ public class MemberController {
         memberService.join(member);
         return "home/login";
     }
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        model.addAttribute("memberForm", new MemberForm());
+        return "home/login";
+    }
+
+    @PostMapping("/login")
+    public String loginId(MemberForm form, HttpSession session) {
+        String mId = memberService.findOne(form.getM_id());
+        session.setAttribute("m_id", mId);
+        return "redirect:/";
+    }
+
+    @GetMapping("/")
+    public String mainHome(HttpSession session, Model model) {
+        String mId = (String) session.getAttribute("m_id");
+        model.addAttribute("m_id", mId);
+        System.out.println("이걸 지났다네~~" + mId);
+        return "home/index";
+    }
+
 }
+
