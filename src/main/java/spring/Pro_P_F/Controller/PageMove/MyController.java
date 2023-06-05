@@ -35,10 +35,6 @@ public class MyController {
         return "my/my_mypage";
     }
 
-    @GetMapping("/upload")
-    public String upload(Model model) {
-        return "my/upload";
-    }
 
 
     // test 회원가입 성공 코드
