@@ -7,6 +7,8 @@ import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.repository.PostingRepository;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -20,4 +22,9 @@ public class PostingService {
 
         return posting.getP_seq();
     }
+
+    public List<Posting> findAll() {
+        return postingRepository.findAll();
+    }
+
 }

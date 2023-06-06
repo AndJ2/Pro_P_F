@@ -6,6 +6,7 @@ import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Posting;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
@@ -16,4 +17,10 @@ public class PostingRepository {
     public void save(Posting posting) {
         em.persist(posting);
     }
+
+    public List<Posting> findAll() {
+        return em.createQuery("select post from Posting post", Posting.class)
+                .getResultList();
+    }
+
 }

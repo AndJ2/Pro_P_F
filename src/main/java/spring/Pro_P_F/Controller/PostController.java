@@ -15,6 +15,7 @@ import spring.Pro_P_F.service.PostingService;
 
 import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class PostController {
@@ -48,6 +49,13 @@ public class PostController {
         posting.setP_date(LocalDate.now());
 
         postingService.save(posting);
+        return "my/posting";
+    }
+
+    @GetMapping("/post")
+    public String list(Model model) {
+        List<Posting> postings = postingService.findAll();
+        model.addAttribute("postings", postings);
         return "my/posting";
     }
 }

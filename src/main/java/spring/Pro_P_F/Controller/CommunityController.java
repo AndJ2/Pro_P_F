@@ -50,7 +50,7 @@ public class CommunityController {
         community.setC_date(LocalDate.now());
 
         communityService.save(community);
-        return "my/community";
+        return "redirect:/com";
     }
 
     @GetMapping("/com")

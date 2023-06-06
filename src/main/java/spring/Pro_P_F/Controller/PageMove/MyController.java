@@ -20,11 +20,6 @@ public class MyController {
         return "my/scrap";
     }
 
-    @GetMapping("/post")
-    public String Posting(Model model) {
-        return "my/posting";
-    }
-
     @GetMapping("/com_de")
     public String Com_detail(Model model) {
         return "my/community_detail";
