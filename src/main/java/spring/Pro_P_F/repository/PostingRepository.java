@@ -23,4 +23,10 @@ public class PostingRepository {
                 .getResultList();
     }
 
+    public List<Posting> findByid(Long id) {
+        return em.createQuery("select p from Posting p where p.id = :id", Posting.class)
+                .setParameter("id", id)
+                .getResultList();
+    }
+
 }

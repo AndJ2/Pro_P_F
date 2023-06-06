@@ -89,37 +89,27 @@
 
         <div >
 
-          <article class="entry entry-single">
+          <article class="entry entry-single" th:each="posting : ${postings}">
 
             <div class="entry-img">
               <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
             </div>
 
-            <h2 class="entry-title">
+            <h2 class="entry-title" th:text="${posting.p_title}">
               커뮤니티 제목
             </h2>
 
             <div class="entry-meta">
               <ul>
                 <li class="d-flex align-items-center"><i class="bi bi-person"></i>홍길동</li>
-                <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="2020-01-01">2020-01-04</time></li>
+                <li class="d-flex align-items-center" th:text="${posting.p_date}"><i class="bi bi-clock"></i><time datetime="2020-01-01">2020-01-04</time></li>
                 <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i>12</li>
                 <li class="d-flex align-items-center"><i class="bi bi-bookmark"></i></li>
               </ul>
             </div>
 
-            <div class="entry-content">
-              <blockquote>
-                <p>
-                  Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
-                </p>
-              </blockquote>
-
-              <h3>Et quae iure vel ut odit alias.</h3>
-              <img src="assets/img/blog/blog-inside-post.jpg" class="img-fluid" alt="">
-
-              <h3>Ut repellat blanditiis est dolore sunt dolorum quae.</h3>
-
+            <div class="entry-content" th:utext="${posting.p_content}">
+              안녕 이게 보이면 안된단다
             </div>
 
             <div class="entry-footer">

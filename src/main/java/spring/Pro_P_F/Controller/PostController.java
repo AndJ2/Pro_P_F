@@ -58,6 +58,14 @@ public class PostController {
         model.addAttribute("postings", postings);
         return "my/posting";
     }
+
+    //임시 포스팅 디테일 파일
+    @GetMapping("/com_de")
+    public String Com_detail(Model model) {
+        List<Posting> postings = postingService.findByid(1L);
+        model.addAttribute("postings", postings);
+        return "my/community_detail";
+    }
 }
 
 

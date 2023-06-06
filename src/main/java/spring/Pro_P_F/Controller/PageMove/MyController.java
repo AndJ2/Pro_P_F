@@ -20,11 +20,6 @@ public class MyController {
         return "my/scrap";
     }
 
-    @GetMapping("/com_de")
-    public String Com_detail(Model model) {
-        return "my/community_detail";
-    }
-
     @GetMapping("/pofo")
     public String port(Model model) {
         return "my/my_mypage";

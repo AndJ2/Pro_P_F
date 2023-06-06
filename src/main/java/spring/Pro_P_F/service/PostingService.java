@@ -27,4 +27,8 @@ public class PostingService {
         return postingRepository.findAll();
     }
 
+    public List<Posting> findByid(Long id){
+        return postingRepository.findByid(id);
+    }
+
 }
