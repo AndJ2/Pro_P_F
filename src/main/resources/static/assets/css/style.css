@@ -2602,6 +2602,8 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개의 카드를 표시 */
   grid-gap: 20px; /* 카드 사이의 간격을 조정 */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {

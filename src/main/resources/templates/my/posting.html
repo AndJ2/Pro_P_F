@@ -89,16 +89,19 @@
   <section class="portfolio">
     <div class="container">
 
-      <div class="card-container" th:each="posting : ${postings}">
-        <div class="card">
-          <img src="assets/img/about.jpg" alt="Image 1">
-          <p class="card-text" th:text="${posting.p_title}">제목 1</p>
-          <div class="card-details">
-            <span class="card-id" th:text="${posting.p_date}">날짜 1</span>
-            <i class="fa fa-heart"><span class="card-likes" th:text="${posting.p_like}"> 좋아요</span></i>
+      <div class="row">
+        <div class="col-md-3" th:each="posting : ${postings}">
+          <div class="card">
+            <img src="assets/img/about.jpg" alt="Image 1">
+            <p class="card-text" th:text="${posting.p_title}">제목 1</p>
+            <div class="card-details">
+              <span class="card-id" th:text="${posting.p_date}">날짜 1</span>
+              <i class="fa fa-heart"><span class="card-likes" th:text="${posting.p_like}"> 좋아요</span></i>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="blog">
