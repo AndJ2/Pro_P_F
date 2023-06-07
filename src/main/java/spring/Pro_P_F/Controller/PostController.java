@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.Controller.Form.PostForm;
 import spring.Pro_P_F.domain.Community;
@@ -59,13 +61,23 @@ public class PostController {
         return "my/posting";
     }
 
-    //임시 포스팅 디테일 파일
-    @GetMapping("/com_de")
-    public String Com_detail(Model model) {
-        List<Posting> postings = postingService.findByid(1L);
+    //고정 id값 받는 포스팅 디테일 파일
+//    @GetMapping("/post_de")
+//    public String Com_detail(Model model) {
+//        List<Posting> postings = postingService.findByid(1L);
+//        model.addAttribute("postings", postings);
+//        return "my/posting_detail";
+//    }
+
+    @GetMapping("/post_de")
+    public String showPostDetails(@RequestParam("id") Long postId, Model model) {
+        List<Posting> postings = postingService.findByid(postId);
         model.addAttribute("postings", postings);
-        return "my/community_detail";
+        // postId 변수를 이용하여 해당 게시물의 세부 내용을 처리하는 로직을 작성합니다.
+        // ...
+        return "my/posting_detail";
     }
+
 }
 
 

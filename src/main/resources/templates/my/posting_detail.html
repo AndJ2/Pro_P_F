@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Posting</title>
+  <title>Community</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -26,8 +26,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css?after" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Moderna
@@ -66,56 +65,115 @@
 
 <main id="main">
 
-  <!-- ======= Our Portfolio Section ======= -->
+  <!-- ======= Blog_detail Section ======= -->
   <section class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <ol>
-          <li><a href="#">최신</a></li>
-          <li><a href="#">인기</a></li>
-          <li><a href="#">전체</a></li>
-        </ol>
+        <h2>커뮤니티 제목</h2>
+
         <ol>
           <li><a href="../home/index.html">Home</a></li>
-          <li>Posting</li>
+          <li><a href="community.html">Community</a></li>
         </ol>
       </div>
 
     </div>
-  </section><!-- End Our Portfolio Section -->
+  </section><!-- End Blog Section -->
 
-  <!-- ======= Portfolio Section ======= -->
-  <section class="portfolio">
-    <div class="container">
+  <!-- ======= Blog Single Section ======= -->
+  <section id="blog" class="blog">
+    <div class="container" data-aos="fade-up">
 
       <div class="row">
-        <div class="col-md-3 mb-4" th:each="posting : ${postings}">
-          <div class="card">
-            <a th:href="@{/post_de(id=${posting.p_seq})}"><img src="assets/img/about.jpg" alt="Image 1"></a>
-            <p class="card-text" th:text="${posting.p_title}">제목 1</p>
-            <div class="card-details">
-              <span class="card-id" th:text="${posting.p_date}">날짜 1</span>
-              <i class="fa fa-heart"><span class="card-likes" th:text="${posting.p_like}"> 좋아요</span></i>
+
+        <div >
+
+          <article class="entry entry-single" th:each="posting : ${postings}">
+
+            <div class="entry-img">
+              <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
             </div>
-          </div>
-        </div>
+
+            <h2 class="entry-title" th:text="${posting.p_title}">
+              커뮤니티 제목
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i>홍길동</li>
+                <li class="d-flex align-items-center" th:text="${posting.p_date}"><i class="bi bi-clock"></i><time datetime="2020-01-01">2020-01-04</time></li>
+                <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i>12</li>
+                <li class="d-flex align-items-center"><i class="bi bi-bookmark"></i></li>
+              </ul>
+            </div>
+
+            <div class="entry-content" th:utext="${posting.p_content}">
+              안녕 이게 보이면 안된단다
+            </div>
+
+            <div class="entry-footer">
+              <i class="bi bi-folder"></i>
+              <ul class="cats">
+                <li><a href="#">시리즈</a></li>
+              </ul>
+
+              <i class="bi bi-tags"></i>
+              <ul class="tags">
+                <li><a href="#">태그</a></li>
+                <li><a href="#">태그</a></li>
+                <li><a href="#">태그</a></li>
+              </ul>
+            </div>
+
+
+          </article><!-- End blog entry -->
+
+          <div class="c_comment">
+            <ul>
+              <li class="d-flex align-items-center"><i class="bi bi-heart"></i>추천 수</li>
+              <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i>댓글 수</li>
+              <li class="d-flex align-items-center"><i class="bi bi-bookmark"></i> 스크랩 수</li>
+            </ul>
+          </div> <br>
+
+          <div class="blog-comments">
+
+            <div id="comment-1" class="comment">
+              <div class="d-flex">
+                <div class="comment-img"><img src="assets/img/blog/comments-1.jpg" alt=""></div>
+                <div>
+                  <h5><a href="">Georgia Reader</a></h5>
+                  <time datetime="2020-01-01">2020-01-04</time>
+                  <p>
+                    Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                    Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                  </p>
+                </div>
+              </div>
+            </div><!-- End comment #1 -->
+
+            <div class="reply-form">
+              <h4>댓글 달기</h4>
+              <form action="">
+                <div class="row">
+                  <div class="col form-group">
+                    <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Comment</button>
+              </form>
+
+            </div>
+
+          </div><!-- End blog comments -->
+
+        </div><!-- End blog entries list -->
 
       </div>
 
     </div>
-
-    <div class="blog">
-    <div class="blog-pagination">
-      <ul class="justify-content-center">
-        <li class="active"><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-      </ul>
-    </div>
-    </div>
-  </section><!-- End Portfolio Section -->
-
+  </section><!-- End Blog Single Section -->
 
 </main><!-- End #main -->
 
