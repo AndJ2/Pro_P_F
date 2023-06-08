@@ -3,6 +3,7 @@ package spring.Pro_P_F.repository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import spring.Pro_P_F.domain.Community;
+import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.domain.Posting;
 
 import javax.persistence.EntityManager;
@@ -28,5 +29,12 @@ public class PostingRepository {
                 .setParameter("id", id)
                 .getResultList();
     }
+
+    public List<Posting> findBym_id(String mId) {
+        return em.createQuery("SELECT p FROM Posting p WHERE p.member.m_id = :mId", Posting.class)
+                .setParameter("mId", mId)
+                .getResultList();
+    }
+
 
 }

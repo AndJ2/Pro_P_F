@@ -20,32 +20,5 @@ public class MyController {
         return "my/scrap";
     }
 
-    @GetMapping("/pofo")
-    public String port(Model model) {
-        return "my/my_mypage";
-    }
 
-
-
-    // test 회원가입 성공 코드
-    @PostMapping("/test")
-    public String testForm(MemberForm form) {
-        Member member = new Member();
-        member.setM_id(form.getM_id());
-        member.setM_pwd(form.getM_pwd());
-        member.setM_phone(form.getM_phone());
-        member.setM_name(form.getM_name());
-        member.setM_git(form.getM_git());
-        member.setM_email(form.getM_email());
-
-        memberService.join(member);
-        return "redirect:/";
-    }
-
-
-    @GetMapping("/test")
-    public String test(Model model) {
-        model.addAttribute("memberForm", new MemberForm());
-        return "X/services";
-    }
 }

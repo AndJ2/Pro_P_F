@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import spring.Pro_P_F.domain.Community;
+import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.repository.PostingRepository;
 
@@ -31,4 +32,7 @@ public class PostingService {
         return postingRepository.findByid(id);
     }
 
+    public List<Posting> findBym_id(String member){
+        return postingRepository.findBym_id(member);
+    }
 }

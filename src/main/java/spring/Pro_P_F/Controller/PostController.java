@@ -4,12 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.Controller.Form.PostForm;
-import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.service.MemberService;
@@ -28,6 +25,7 @@ public class PostController {
     @Autowired
     private PostingService postingService;
 
+    // 포스팅 등록 페이지 로드
     @GetMapping("/upload")
     public String upload(Model model) {
         model.addAttribute("postForm", new PostForm());
@@ -35,6 +33,7 @@ public class PostController {
         return "my/upload";
     }
 
+    // 포스팅 업로드
     @PostMapping("/upload")
     public String postForm(PostForm form, HttpSession session) {
 
@@ -54,6 +53,7 @@ public class PostController {
         return "my/posting";
     }
 
+    // 포스팅 목록 페이지
     @GetMapping("/post")
     public String list(Model model) {
         List<Posting> postings = postingService.findAll();
@@ -61,20 +61,11 @@ public class PostController {
         return "my/posting";
     }
 
-    //고정 id값 받는 포스팅 디테일 파일
-//    @GetMapping("/post_de")
-//    public String Com_detail(Model model) {
-//        List<Posting> postings = postingService.findByid(1L);
-//        model.addAttribute("postings", postings);
-//        return "my/posting_detail";
-//    }
-
+    // 클릭한 포스팅 상세페이지 로드
     @GetMapping("/post_de")
     public String showPostDetails(@RequestParam("id") Long postId, Model model) {
         List<Posting> postings = postingService.findByid(postId);
         model.addAttribute("postings", postings);
-        // postId 변수를 이용하여 해당 게시물의 세부 내용을 처리하는 로직을 작성합니다.
-        // ...
         return "my/posting_detail";
     }
 

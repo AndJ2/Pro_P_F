@@ -24,15 +24,17 @@ public class CommunityController {
     @Autowired
     private MemberService memberService;
 
+    // 커뮤니티 게시물 등록 페이지 로드
     @GetMapping("/com_add")
     public String com_add(Model model, HttpSession session) {
         String mId = (String) session.getAttribute("m_id");
-        System.out.println("이걸 지났다네~~" + mId);
+        System.out.println("mId = " + mId);
 
         model.addAttribute("communityForm", new CommunityForm());
         return "my/com_add";
     }
-    
+
+    // 커뮤니티 게시물 등록
     @PostMapping("/com_add")
     public String communityForm(CommunityForm form, HttpSession session) {
 
@@ -53,6 +55,7 @@ public class CommunityController {
         return "redirect:/com";
     }
 
+    // 커뮤니티 게시물 목록
     @GetMapping("/com")
     public String list(Model model) {
         List<Community> communities = communityService.findAllComm();
