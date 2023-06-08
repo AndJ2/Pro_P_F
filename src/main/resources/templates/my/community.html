@@ -205,15 +205,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                  <tr th:each="community : ${communities}">
-                    <td th:text="${community.c_seq}"></td>
-                    <td th:text="${community.c_title}"></td>
-                    <td th:text="${community.c_category}"></td>
-                    <td th:text="${community.c_date}"></td>
-                    <td th:text="${community.c_like}"></td>
-                  </tr>
+                <tr th:each="community : ${communities}">
+                  <td th:text="${community.c_seq}"></td>
+                  <td>
+                    <a th:href="@{/com_de(id=${community.c_seq})}" th:text="${community.c_title}"></a>
+                  </td>
+                  <td th:text="${community.c_category}"></td>
+                  <td th:text="${community.c_date}"></td>
+                  <td th:text="${community.c_like}"></td>
+                </tr>
                 </tbody>
               </table>
+
             </div>
           </section>
 

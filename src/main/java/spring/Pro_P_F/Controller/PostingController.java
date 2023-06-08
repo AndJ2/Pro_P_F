@@ -17,7 +17,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Controller
-public class PostController {
+public class PostingController {
 
     @Autowired
     private MemberService memberService;

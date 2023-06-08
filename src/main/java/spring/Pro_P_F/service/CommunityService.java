@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import spring.Pro_P_F.domain.Community;
+import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.repository.CommunityRepository;
 
 
@@ -25,6 +26,10 @@ public class CommunityService {
 
     public List<Community> findAllComm() {
         return communityRepository.findAll();
+    }
+
+    public List<Community> findByid(Long id){
+        return communityRepository.findByid(id);
     }
 
 

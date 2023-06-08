@@ -5,9 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Member;
+import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.service.CommunityService;
 import spring.Pro_P_F.service.MemberService;
 
@@ -62,5 +64,22 @@ public class CommunityController {
         model.addAttribute("communities", communities);
         return "my/community";
     }
-    
+
+    @GetMapping("/com_de")
+    public String showComDetails(@RequestParam("id") Long comId, Model model) {
+        List<Community> communities = communityService.findByid(comId);
+        model.addAttribute("communities", communities);
+
+        return "my/community_detail";
+    }
+
+
+//    @GetMapping("/post_de")
+//    public String showPostDetails(@RequestParam("id") Long postId, Model model) {
+//        List<Posting> postings = postingService.findByid(postId);
+//        model.addAttribute("postings", postings);
+//        return "my/posting_detail";
+//    }
+
+
 }
