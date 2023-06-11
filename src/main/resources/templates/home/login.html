@@ -40,7 +40,7 @@
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" style="background-color: #1e4356">
   <div class="container d-flex justify-content-between align-items-center">
 
     <div class="logo">
@@ -48,15 +48,11 @@
     </div>
 
     <nav id="navbar" class="navbar">
-      <form action="" method="post">
-        <input type="text">
-        <button type="submit"><i class="bi bi-search"></i></button>
-      </form>
       <ul>
         <li><a href="employ">공고</a></li>
         <li><a href="post">포스팅</a></li>
         <li><a href="com">커뮤니티</a></li>
-        <li><a href="#">기업채널</a></li>
+        <li><a href="com">기업채널</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -91,28 +87,31 @@
       <div class="row">
 
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 mx-auto">
           <form action="login" method="post" role="form" th:object="${memberForm}" class="php-email-form">
             <div class="row">
               <!-- 아이디 -->
-              <div class="col-lg-12">
+              <div class="col-lg-12 mb-4">
                 <h5>아이디</h5>
               </div>
-              <div class="col-md-6 form-group mt-12">
-                <input type="text" class="form-control" th:field="*{m_id}" placeholder="아이디 입력" required>
-                <br>
+              <div class="form-group mt-12">
+                <input type="text" th:field="*{m_id}" class="form-control" id="id" placeholder="아이디 입력" pattern="[a-zA-Z0-9]+" title="영문자와 숫자만 입력 가능합니다." required>
               </div>
 
-<!--              &lt;!&ndash; 비밀번호 &ndash;&gt;-->
-<!--              <div class="col-lg-12">-->
-<!--                <h5>비밀번호</h5>-->
-<!--              </div>-->
-<!--              <div class="col-md-6 form-group mt-12">-->
-<!--                <input type="text" class="form-control" th:field="*{m_pwd}" placeholder="비밀번호 입력" required>-->
-<!--              </div>-->
+              <!-- 비밀번호 -->
+              <!-- <div class="col-lg-12 mb-4">
+                <hr class="section-divider">
+                <h5>비밀번호</h5>
+              </div>
+              <div class="form-group mt-12">
+                <input type="password" class="form-control" name="pw" id="pw" placeholder="비밀번호 입력" required>
+              </div> -->
 
               <div class="my-3"></div>
-              <div class="text-center"><button type="submit">로그인</button></div>
+              <div class="text-center">
+                <button type="submit">로그인</button>
+              </div>
+            </div>
           </form>
         </div>
 

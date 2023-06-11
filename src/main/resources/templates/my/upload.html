@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns="http://www.w3.org/1999/html">
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
@@ -75,7 +75,7 @@
                 <h2>upload</h2>
 
                 <ol>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li>Upload</li>
                 </ol>
             </div>
@@ -134,19 +134,22 @@
         </style>
 <!--        <div class="input-field col-lg-3">-->
 <!--            <select>-->
-<!--                <option value="" disabled selected>시리즈 선택</option>-->
-<!--                <option value="series1">시리즈1</option>-->
-<!--                <option value="series2">시리즈2</option>-->
-<!--                <option value="series3">시리즈3</option>-->
+<!--                <option value="" disabled selected>게시판 선택</option>-->
+<!--                <option value="series1">전체</option>-->
+<!--                <option value="series2">자유</option>-->
+<!--                <option value="series3">취준</option>-->
+<!--                <option value="series3">인턴</option>-->
+<!--                <option value="series3">대학</option>-->
 <!--            </select>-->
 <!--        </div>-->
-        <hr>
-        <form action="upload" method="post" th:object="${postForm}">
-            <input type="hidden" th:field="*{date}" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" />
-            <div class="input-field">
+<!--        <hr>-->
+        <div class="input-field">
+            <form action="upload" method="post" th:object="${postForm}">
+                <input type="hidden" th:field="*{date}" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" />
+                <div class="input-field">
                     <input type="text" th:field="*{title}" placeholder="제목" maxlength="100">
-            </div>
-            <input type="hidden" th:field="*{content}" id="postContent" />
+                </div>
+                <input type="hidden" th:field="*{content}" id="postContent" />
                 <div id="editor"></div>
                 <script>
                     var quill = new Quill('#editor', {
@@ -182,8 +185,7 @@
                     <button type="submit" class="btn profile-edit-btn">등록하기</button>
                     <button class="btn profile-edit-btn">취소하기</button>
                 </div>
-        </form>
-
+            </form>
 
     </article>
 </main>

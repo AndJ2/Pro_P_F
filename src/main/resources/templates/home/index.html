@@ -41,7 +41,7 @@
 
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" style="background-color: #1e4356">
   <div class="container d-flex justify-content-between align-items-center">
 
     <div class="logo">
@@ -49,15 +49,11 @@
     </div>
 
     <nav id="navbar" class="navbar">
-      <form action="" method="post">
-        <input type="text">
-        <button type="submit"><i class="bi bi-search"></i></button>
-      </form>
       <ul>
         <li><a href="employ">공고</a></li>
         <li><a href="post">포스팅</a></li>
         <li><a href="com">커뮤니티</a></li>
-        <li><a href="#">기업채널</a></li>
+        <li><a href="com">기업채널</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -78,7 +74,7 @@
       <div class="carousel-container">
         <h2 class="animate__animated animate__fadeInDown">맞춤 공고보기! <!--<span>공고페이지</span>--></h2>
         <p class="animate__animated animate__fadeInUp">지역, 직군, 채용 형태 등 본인에게 가장 최적화된 공고를 찾을 수 있습니다.</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">자세히 보기</a>
+        <a href="employ" class="btn-get-started animate__animated animate__fadeInUp">자세히 보기</a>
       </div>
     </div>
 
@@ -87,7 +83,7 @@
       <div class="carousel-container">
         <h2 class="animate__animated animate__fadeInDown">포스팅 보러가기!</h2>
         <p class="animate__animated animate__fadeInUp">회원들의 포트폴리오를 게시물과 시리즈로 자세히 볼 수 있습니다.</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">자세히 보기</a>
+        <a href="post" class="btn-get-started animate__animated animate__fadeInUp">자세히 보기</a>
       </div>
     </div>
 
@@ -96,7 +92,7 @@
       <div class="carousel-container">
         <h2 class="animate__animated animate__fadeInDown">포트폴리오 제작하기!</h2>
         <p class="animate__animated animate__fadeInUp">제작, 공유, 프로젝트 첨부를 통해 포트폴리오를 간편하게 관리하세요.</p>
-        <a href="" class="btn-get-started animate__animated animate__fadeInUp">포트폴리오 만들러가기</a>
+        <a href="upload" class="btn-get-started animate__animated animate__fadeInUp">포트폴리오 만들러가기</a>
       </div>
     </div>
 
@@ -118,72 +114,79 @@
     <div class="container">
       <div class="row">
         <div class="text-center">
-          <span th:text="${m_id}">안녕</span>
-          <h3>오늘의 추천 게시물</h3>
+          <h2 class="animate__animated animate__fadeInDown">오늘의 추천 게시물</h2><br>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-box icon-box-pink">
-            <img src="assets/img/blog/blog-1.jpg" alt="blog" width="245" height="200"/>
-            <h4 class="title"><a href="">프론트엔드 개발의 종말</a></h4>
+        <div class="card-container">
+          <div class="card">
+            <img src="assets/img/about.jpg" alt="Image 1">
+            <p class="card-text">내용 1</p>
+            <div class="card-details">
+              <span class="card-id">아이디 1</span>
+              <span class="card-likes"><i class="fa fa-heart"></i> 10</span>
+            </div>
           </div>
-        </div>
+          <div class="card">
+            <img src="assets/img/service-details-2.jpg" alt="Image 2">
+            <p class="card-text">내용 2</p>
+            <div class="card-details">
+              <span class="card-id">아이디 2</span>
+              <span class="card-likes"><i class="fa fa-heart"></i> 15</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/img/hero-bg.jpg" alt="Image 3">
+            <p class="card-text">내용 3</p>
+            <div class="card-details">
+              <span class="card-id">아이디 3</span>
+              <span class="card-likes"><i class="fa fa-heart"></i> 20</span>
+            </div>
+          </div>
+          <div class="card">
+            <img src="assets/img/service-details-1.jpg" alt="Image 4">
+            <p class="card-text">내용 4</p>
+            <div class="card-details">
+              <span class="card-id">아이디 4</span>
+              <span class="card-likes"><i class="fa fa-heart"></i> 5</span>
+            </div>
+          </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon-box icon-box-cyan">
-            <img src="assets/img/blog/blog-1.jpg" alt="blog" width="245" height="200"/>
-            <h4 class="title"><a href="">애니메이션 구현하기</a></h4>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon-box icon-box-green">
-            <img src="assets/img/blog/blog-1.jpg" alt="blog" width="245" height="200"/>
-            <h4 class="title"><a href="">Next.js 13.3 변경점</a></h4>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon-box icon-box-blue">
-            <img src="assets/img/blog/blog-1.jpg" alt="blog" width="245" height="200"/>
-            <h4 class="title"><a href="">코드스테이츠와 민사소송 결론</a></h4>
-          </div>
         </div>
 
       </div>
-
     </div>
   </section><!-- End Services Section -->
 
   <!-- ======= Why Us Section ======= -->
-  <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+  <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="400">
     <div class="container">
       <div class="text-center">
-        <h2>New! 공고</h2>
+        <h2 class="animate__animated animate__fadeInDown">NEW! 공고</h2><br>
       </div>
-      <div class="row">
-        <table class="ui celled table">
-          <thead>
-          <tr>
-            <th>공고명</th>
-            <th>채용형태</th>
-            <th>기업명</th>
-            <th>근무지역</th>
-            <th>마감일</th>
-            <th></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>IOS 개발자 구함둥</td>
-            <td>경력 </td>
-            <td>카카오</td>
-            <td>서울</td>
-            <td>~ 4/30</td>
-          </tr>
-          </tbody>
-        </table>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <table class="ui celled table">
+            <thead>
+            <tr>
+              <th>공고명</th>
+              <th>채용형태</th>
+              <th>기업명</th>
+              <th>근무지역</th>
+              <th>마감일</th>
+              <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>IOS 개발자 구함둥</td>
+              <td>경력 </td>
+              <td>카카오</td>
+              <td>서울</td>
+              <td>~ 4/30</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-
     </div>
   </section><!-- End Why Us Section -->
 
