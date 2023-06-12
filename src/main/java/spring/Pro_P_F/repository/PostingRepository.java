@@ -20,7 +20,7 @@ public class PostingRepository {
     }
 
     public List<Posting> findAll() {
-        return em.createQuery("select post from Posting post", Posting.class)
+        return em.createQuery("select post from Posting post ORDER BY post.p_date desc", Posting.class)
                 .getResultList();
     }
 
@@ -33,6 +33,13 @@ public class PostingRepository {
     public List<Posting> findBym_id(String mId) {
         return em.createQuery("SELECT p FROM Posting p WHERE p.member.m_id = :mId", Posting.class)
                 .setParameter("mId", mId)
+                .getResultList();
+    }
+
+    //추천 포스팅
+    public List<Posting> new_posting() {
+        return em.createQuery("SELECT p FROM Posting p ORDER BY p.p_date desc", Posting.class)
+                .setMaxResults(4)
                 .getResultList();
     }
 

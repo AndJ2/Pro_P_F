@@ -35,4 +35,8 @@ public class PostingService {
     public List<Posting> findBym_id(String member){
         return postingRepository.findBym_id(member);
     }
+
+    public List<Posting> new_posting(){
+        return postingRepository.new_posting();
+    }
 }

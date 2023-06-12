@@ -50,7 +50,7 @@ public class PostingController {
         posting.setP_date(LocalDate.now());
 
         postingService.save(posting);
-        return "my/posting";
+        return "redirect:/post";
     }
 
     // 포스팅 목록 페이지

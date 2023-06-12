@@ -10,16 +10,22 @@ import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.Controller.Form.MemberForm;
 import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Member;
+import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.service.MemberService;
+import spring.Pro_P_F.service.PostingService;
 
 import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class MemberController {
 
     @Autowired
     private MemberService memberService;
+
+    @Autowired
+    private PostingService postingService;
 
     @GetMapping("/join")
     public String join(Model model) {
@@ -42,7 +48,7 @@ public class MemberController {
         return "home/login";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String login(Model model) {
         model.addAttribute("memberForm", new MemberForm());
         return "home/login";
@@ -57,15 +63,19 @@ public class MemberController {
             String mId = form.getM_id();
             session.setAttribute("m_id", mId);
 
-            return "redirect:/";
+            return "redirect:/main";
         }
     }
 
-    @GetMapping("/")
+    @GetMapping("/main")
     public String mainHome(HttpSession session, Model model) {
         String mId = (String) session.getAttribute("m_id");
         model.addAttribute("m_id", mId);
         System.out.println("이걸 지났다네~~" + mId);
+
+        List<Posting> new_posting = postingService.new_posting();
+        model.addAttribute("new_posting", new_posting);
+
         return "home/index";
     }
 

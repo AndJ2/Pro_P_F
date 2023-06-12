@@ -44,7 +44,7 @@
   <div class="container d-flex justify-content-between align-items-center">
 
     <div class="logo">
-      <h1 class="text-light"><a href="/"><span>Pro P.F</span></a></h1>
+      <h1 class="text-light"><a href="/main"><span>Pro P.F</span></a></h1>
     </div>
 
     <nav id="navbar" class="navbar">
@@ -191,16 +191,14 @@
 
           <section class="article-list table-common con">
             <div class="table-responsive">
-              <a href="#" class="btn-create">글 작성하기</a>
+              <a th:href="@{/com_add}" class="btn-create">글 작성하기</a>
               <table class="table">
                 <thead>
                 <tr>
                   <th>번호</th>
                   <th>제목</th>
-                  <th>게시판명</th>
                   <th>글쓴이</th>
                   <th>등록일</th>
-                  <th>조회</th>
                   <th>추천</th>
                 </tr>
                 </thead>
@@ -210,7 +208,7 @@
                   <td>
                     <a th:href="@{/com_de(id=${community.c_seq})}" th:text="${community.c_title}"></a>
                   </td>
-                  <td th:text="${community.c_category}"></td>
+                  <td th:text="${community.member.m_id}"></td>
                   <td th:text="${community.c_date}"></td>
                   <td th:text="${community.c_like}"></td>
                 </tr>

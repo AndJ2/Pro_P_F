@@ -45,7 +45,7 @@
   <div class="container d-flex justify-content-between align-items-center">
 
     <div class="logo">
-      <h1 class="text-light"><a href="/"><span>Pro P.F</span></a></h1>
+      <h1 class="text-light"><a href="/main"><span>Pro P.F</span></a></h1>
     </div>
 
     <nav id="navbar" class="navbar">
@@ -114,44 +114,19 @@
     <div class="container">
       <div class="row">
         <div class="text-center">
-          <h2 class="animate__animated animate__fadeInDown">오늘의 추천 게시물</h2><br>
+          <h2 class="animate__animated animate__fadeInDown">최신 게시물</h2><br>
         </div>
-        <div class="card-container">
+        <div class="card-container col-md-3" th:each="posting : ${new_posting}">
           <div class="card">
             <img src="assets/img/about.jpg" alt="Image 1">
-            <p class="card-text">내용 1</p>
+            <p class="card-text" th:text="${posting.p_title}">내용 1</p>
             <div class="card-details">
-              <span class="card-id">아이디 1</span>
-              <span class="card-likes"><i class="fa fa-heart"></i> 10</span>
+              <span class="card-id" th:text="${posting.member.m_id}">아이디 1</span>
+              <span class="card-likes"><i class="fa fa-heart" th:text="${posting.p_date}"></i></span>
             </div>
-          </div>
-          <div class="card">
-            <img src="assets/img/service-details-2.jpg" alt="Image 2">
-            <p class="card-text">내용 2</p>
-            <div class="card-details">
-              <span class="card-id">아이디 2</span>
-              <span class="card-likes"><i class="fa fa-heart"></i> 15</span>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/img/hero-bg.jpg" alt="Image 3">
-            <p class="card-text">내용 3</p>
-            <div class="card-details">
-              <span class="card-id">아이디 3</span>
-              <span class="card-likes"><i class="fa fa-heart"></i> 20</span>
-            </div>
-          </div>
-          <div class="card">
-            <img src="assets/img/service-details-1.jpg" alt="Image 4">
-            <p class="card-text">내용 4</p>
-            <div class="card-details">
-              <span class="card-id">아이디 4</span>
-              <span class="card-likes"><i class="fa fa-heart"></i> 5</span>
-            </div>
-          </div>
-
         </div>
 
+        </div>
       </div>
     </div>
   </section><!-- End Services Section -->
@@ -191,84 +166,84 @@
   </section><!-- End Why Us Section -->
 
   <!-- ======= Features Section ======= -->
-  <section class="features">
-    <div class="container">
+<!--  <section class="features">-->
+<!--    <div class="container">-->
 
-      <div class="section-title">
-        <h2>Features</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div>
+<!--      <div class="section-title">-->
+<!--        <h2>Features</h2>-->
+<!--        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+<!--      </div>-->
 
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-5">
-          <img src="assets/img/features-1.svg" class="img-fluid" alt="">
-        </div>
-        <div class="col-md-7 pt-4">
-          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-          <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-          <ul>
-            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-          </ul>
-        </div>
-      </div>
+<!--      <div class="row" data-aos="fade-up">-->
+<!--        <div class="col-md-5">-->
+<!--          <img src="assets/img/features-1.svg" class="img-fluid" alt="">-->
+<!--        </div>-->
+<!--        <div class="col-md-7 pt-4">-->
+<!--          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>-->
+<!--          <p class="fst-italic">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+<!--            magna aliqua.-->
+<!--          </p>-->
+<!--          <ul>-->
+<!--            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>-->
+<!--            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-5 order-1 order-md-2">
-          <img src="assets/img/features-2.svg" class="img-fluid" alt="">
-        </div>
-        <div class="col-md-7 pt-5 order-2 order-md-1">
-          <h3>Corporis temporibus maiores provident</h3>
-          <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </p>
-        </div>
-      </div>
+<!--      <div class="row" data-aos="fade-up">-->
+<!--        <div class="col-md-5 order-1 order-md-2">-->
+<!--          <img src="assets/img/features-2.svg" class="img-fluid" alt="">-->
+<!--        </div>-->
+<!--        <div class="col-md-7 pt-5 order-2 order-md-1">-->
+<!--          <h3>Corporis temporibus maiores provident</h3>-->
+<!--          <p class="fst-italic">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+<!--            magna aliqua.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate-->
+<!--            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in-->
+<!--            culpa qui officia deserunt mollit anim id est laborum-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-5">
-          <img src="assets/img/features-3.svg" class="img-fluid" alt="">
-        </div>
-        <div class="col-md-7 pt-5">
-          <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>
-          <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>
-          <ul>
-            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-            <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>
-          </ul>
-        </div>
-      </div>
+<!--      <div class="row" data-aos="fade-up">-->
+<!--        <div class="col-md-5">-->
+<!--          <img src="assets/img/features-3.svg" class="img-fluid" alt="">-->
+<!--        </div>-->
+<!--        <div class="col-md-7 pt-5">-->
+<!--          <h3>Sunt consequatur ad ut est nulla consectetur reiciendis animi voluptas</h3>-->
+<!--          <p>Cupiditate placeat cupiditate placeat est ipsam culpa. Delectus quia minima quod. Sunt saepe odit aut quia voluptatem hic voluptas dolor doloremque.</p>-->
+<!--          <ul>-->
+<!--            <li><i class="bi bi-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>-->
+<!--            <li><i class="bi bi-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>-->
+<!--            <li><i class="bi bi-check"></i> Facilis ut et voluptatem aperiam. Autem soluta ad fugiat.</li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </div>-->
 
-      <div class="row" data-aos="fade-up">
-        <div class="col-md-5 order-1 order-md-2">
-          <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-        </div>
-        <div class="col-md-7 pt-5 order-2 order-md-1">
-          <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-          <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
-          </p>
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </p>
-        </div>
-      </div>
+<!--      <div class="row" data-aos="fade-up">-->
+<!--        <div class="col-md-5 order-1 order-md-2">-->
+<!--          <img src="assets/img/features-4.svg" class="img-fluid" alt="">-->
+<!--        </div>-->
+<!--        <div class="col-md-7 pt-5 order-2 order-md-1">-->
+<!--          <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>-->
+<!--          <p class="fst-italic">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore-->
+<!--            magna aliqua.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate-->
+<!--            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in-->
+<!--            culpa qui officia deserunt mollit anim id est laborum-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
 
-    </div>
-  </section><!-- End Features Section -->
+<!--    </div>-->
+<!--  </section>&lt;!&ndash; End Features Section &ndash;&gt;-->
 
 </main><!-- End #main -->
 
