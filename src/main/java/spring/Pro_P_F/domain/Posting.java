@@ -11,10 +11,10 @@ import java.time.LocalDate;
 @Getter @Setter
 public class Posting {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long p_seq;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "m_id")
     private Member member;
 

@@ -8,10 +8,10 @@ import java.time.LocalDate;
 @Entity
 public class Series {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long s_seq;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "m_id")
     private Member member;
 
