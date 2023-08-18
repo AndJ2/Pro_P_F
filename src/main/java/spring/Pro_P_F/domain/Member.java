@@ -10,9 +10,7 @@ import javax.persistence.*;
 @Getter @Setter
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long seq;
-
+    @Id
     private String m_id;
 
     private String m_pwd;

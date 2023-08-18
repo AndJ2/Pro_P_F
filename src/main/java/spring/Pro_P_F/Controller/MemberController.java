@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.Pro_P_F.Controller.Form.CommunityForm;
 import spring.Pro_P_F.Controller.Form.MemberForm;
+import spring.Pro_P_F.Controller.Form.PostForm;
 import spring.Pro_P_F.domain.Community;
 import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.domain.Posting;
@@ -79,5 +80,9 @@ public class MemberController {
         return "home/index";
     }
 
+    @GetMapping("/comch")
+    public String comch(Model model) {
+        return "company/company_channel";
+    }
 }
 
