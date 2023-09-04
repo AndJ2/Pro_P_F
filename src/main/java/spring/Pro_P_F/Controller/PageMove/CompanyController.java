@@ -11,6 +11,11 @@ public class CompanyController {
         return "company/employ";
     }
 
+    @GetMapping("/employ_add")
+    public String Employ_add(Model model) {
+        return "company/employ_add";
+    }
+
     @GetMapping("/em_de")
     public String Employ_detail(Model model) {
         return "company/employ_detail";
@@ -19,5 +24,10 @@ public class CompanyController {
     @GetMapping("/company_my")
     public String company(Model model) {
         return "company/company-mypage";
+    }
+
+    @GetMapping("/company_ch")
+    public String company_ch(Model model) {
+        return "company/company_channel";
     }
 }
