@@ -55,18 +55,44 @@ public class MemberController {
         return "home/login";
     }
 
+//    @PostMapping("/login")
+//    public String loginId(MemberForm form, HttpSession session) {
+//        String mId = form.getM_id();
+//        String mPwd = form.getM_pwd();
+//
+//        if (memberService.login(mId, mPwd)) {
+//            throw new IllegalArgumentException("존재하지 않는 id입니다");
+//        } else {
+//            String memId = form.getM_id();
+//            session.setAttribute("m_id", memId);
+//
+//            return "redirect:/main";
+//        }
+//    }
+
     @PostMapping("/login")
     public String loginId(MemberForm form, HttpSession session) {
-        Member test = memberService.findOne(form.getM_id());
-        if (test == null) {
+        String mId = form.getM_id();
+        String mPwd = form.getM_pwd();
+
+        // 입력된 아이디로 회원을 조회합니다.
+        Member member = memberService.findOne(mId);
+
+        if (member == null) {
             throw new IllegalArgumentException("존재하지 않는 id입니다");
         } else {
-            String mId = form.getM_id();
-            session.setAttribute("m_id", mId);
-
-            return "redirect:/main";
+            // 회원이 존재하면 비밀번호를 확인합니다.
+            if (member.getM_pwd().equals(mPwd)) {
+                // 아이디와 비밀번호가 일치하는 경우 세션에 아이디를 저장하고 로그인 성공 처리를 합니다.
+                session.setAttribute("m_id", mId);
+                return "redirect:/main";
+            } else {
+                // 비밀번호가 일치하지 않는 경우 예외를 던지거나 에러 메시지를 처리할 수 있습니다.
+                throw new IllegalArgumentException("비밀번호가 일치하지 않습니다");
+            }
         }
     }
+
 
     @GetMapping("/main")
     public String mainHome(HttpSession session, Model model) {

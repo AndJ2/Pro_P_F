@@ -27,6 +27,12 @@ public class MemberService {
         return memberRepository.findOne(memberId);
     }
 
-
+    public boolean login(String memberid, String password) {
+        Member member = memberRepository.findOne(memberid);
+        if (member != null && member.getM_pwd().equals(password)) {
+            return true;
+        }
+        return false;
+    }
 
 }
