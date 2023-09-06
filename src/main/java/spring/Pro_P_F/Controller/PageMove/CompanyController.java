@@ -30,4 +30,14 @@ public class CompanyController {
     public String company_ch(Model model) {
         return "company/company_channel";
     }
+
+    @GetMapping("/series")
+    public String series (Model model) {
+        return "my/series";
+    }
+
+    @GetMapping("/cmain")
+    public String company_main (Model model) {
+        return "home/company_index";
+    }
 }

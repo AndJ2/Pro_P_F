@@ -112,6 +112,11 @@
       color: #ccc;
     }
 
+    /*!*검색바 하단 간격*!*/
+    /*.search123.category {*/
+    /*  margin-bottom: 30px; !* 원하는 간격으로 조절 *!*/
+    /*}*/
+
   </style>
   <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
@@ -134,7 +139,13 @@
         <div class="col-lg-9 entries">
 
           <section class="article-list table-common con">
-            <div class="table-responsive">
+            <div class="table-responsive"> <!-- text-center 클래스 추가 -->
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                <div class="search123 category">
+                  <input type="text" placeholder="검색어 입력">
+                  <a href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a>
+                </div>
+              </div>
               <a th:href="@{/com_add}" class="btn-create">글 작성하기</a>
               <table class="table">
                 <thead>
@@ -161,6 +172,10 @@
 
             </div>
           </section>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main><!-- End #main -->
 
