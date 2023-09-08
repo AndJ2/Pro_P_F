@@ -69,6 +69,24 @@ public class PostingController {
         return "my/posting_detail";
     }
 
+    // 클릭한 포스팅 아이디 마이페이지 로드
+    @GetMapping("/profile")
+    public String userProfile(@RequestParam("memberId") String memberId, Model model) {
+        // 여기에서 사용자의 프로필 정보를 가져와서 모델에 추가하는 로직을 구현합니다.
+        // 예를 들어, 사용자 정보를 데이터베이스에서 조회하고 모델에 추가합니다.
+        model.addAttribute("memberId", memberId);
+        System.out.println("이걸 지났다네~~" + memberId);
+
+        List<Posting> postings = postingService.findBym_id(memberId);
+        model.addAttribute("postings", postings);
+        return "my/mypage_other"; // 사용자 프로필 페이지로 이동하는 뷰 이름을 반환합니다.
+    }
+
+    @GetMapping("/series_add")
+    public String add_series(){
+        return "my/series_add";
+    }
+
 }
 
 

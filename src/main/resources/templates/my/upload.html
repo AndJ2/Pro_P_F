@@ -83,23 +83,23 @@
 
 
         </style>
-<!--        <div class="input-field col-lg-3">-->
-<!--            <select>-->
-<!--                <option value="" disabled selected>게시판 선택</option>-->
-<!--                <option value="series1">전체</option>-->
-<!--                <option value="series2">자유</option>-->
-<!--                <option value="series3">취준</option>-->
-<!--                <option value="series3">인턴</option>-->
-<!--                <option value="series3">대학</option>-->
-<!--            </select>-->
-<!--        </div>-->
-<!--        <hr>-->
+
         <div class="input-field">
             <form action="upload" method="post" th:object="${postForm}">
                 <input type="hidden" th:field="*{date}" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" />
-                <div class="input-field">
-                    <input type="text" th:field="*{title}" placeholder="제목" maxlength="100">
-                </div>
+               <div class="row">
+                    <div class="col-md-8 input-field">
+                        <input type="text" th:field="*{title}" placeholder="제목" maxlength="100">
+                    </div>
+                    <div class="col-md-4 input-field">
+                        <select id="category" name="category" th:field="*{series}">
+                            <option value="카테고리1">카테고리1</option>
+                            <option value="카테고리2">카테고리2</option>
+                            <option value="카테고리3">카테고리3</option>
+                            <!-- 필요한 만큼 카테고리 옵션을 추가합니다. -->
+                        </select>
+                    </div>
+               </div>
                 <input type="hidden" th:field="*{content}" id="postContent" />
                 <div id="editor"></div>
                 <script>

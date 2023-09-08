@@ -16,7 +16,6 @@ public class Series {
     private Member member;
 
     private String s_name;
-    private String s_intro;
 
     @LastModifiedDate
     private LocalDate s_date;

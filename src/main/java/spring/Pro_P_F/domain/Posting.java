@@ -18,6 +18,10 @@ public class Posting {
     @JoinColumn(name = "m_id")
     private Member member;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "series")
+    private Series series;
+
     private String p_title;
     private String p_content;
     private int p_like;

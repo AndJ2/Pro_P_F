@@ -38,7 +38,7 @@
 
       <div class="profile-user-settings">
 
-        <h1 class="profile-user-name" th:text="${session.m_id}">username</h1>
+        <h1 class="profile-user-name" th:text="${memberId}">username</h1>
 
       </div>
 
@@ -47,8 +47,6 @@
         <ul>
           <li><i class="bi bi-github"></i></li>
           <li><i class="bi bi-envelope"></i></li>
-          <li><a th:href="@{/upload}" class="btn profile-edit-btn">글작성</a></li>
-          <li><a th:href="@{/series_add}" class="btn profile-edit-btn">시리즈 추가</a></li>
         </ul>
 
       </div>
@@ -82,17 +80,19 @@
 
               <article class="entry" th:each="posting : ${postings}">
 
-                <div class="entry-img">
-                  <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-                </div>
+                <a th:href="'/post_de?id=' + ${posting.p_seq}">
+                  <div class="entry-img">
+                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                  </div>
+                </a>
 
                 <h2 class="entry-title">
-                  <a href="blog-single.html" th:text="${posting.p_title}">title</a>
+                  <a href="#" th:text="${posting.p_title}">title</a>
                 </h2>
 
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person" th:text="${session.m_id}"></i></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person" th:text="${memberId}"></i></li>
                     <li class="d-flex align-items-center"><i class="bi bi-clock" th:text="${posting.p_date}"></i></li>
                   </ul>
                 </div>
