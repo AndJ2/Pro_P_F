@@ -15,4 +15,8 @@ public interface CommunityRepository extends JpaRepository<Community, Long> {
     List<Community> findByseq(Long cSeq);
 
     List<Community> findByCategory(String category);
+
+    // 게시물 검색
+    List<Community> findByTitleContainingIgnoreCaseOrContentContainingIgnoreCase(String title, String content);
+
 }

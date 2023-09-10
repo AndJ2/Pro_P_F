@@ -21,8 +21,13 @@ public class Community {
 
     @Column(name = "c_category")
     private String category;
-    private String c_title;
-    private String c_content;
+
+    @Column(name = "c_title")
+    private String title;
+
+    @Column(name = "c_content")
+    private String content;
+
     private int c_like;
 
 

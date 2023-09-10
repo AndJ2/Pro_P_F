@@ -48,8 +48,8 @@ public class CommunityController {
         Community community = new Community();
 
         community.setMember(member);
-        community.setC_title(form.getTitle());
-        community.setC_content(form.getContent());
+        community.setTitle(form.getTitle());
+        community.setContent(form.getContent());
         community.setCategory(form.getCategory());
         community.setC_date(LocalDate.now());
 
@@ -89,6 +89,16 @@ public class CommunityController {
         model.addAttribute("communities", communities);
         return "my/community";
     }
+
+    // 커뮤니티 게시물 검색
+    @GetMapping("/community_search")
+    public String searchCommunity(@RequestParam(name = "keyword") String keyword, Model model) {
+        System.out.println("검색어: " + keyword);
+        List<Community> communities = communityService.searchCommunitiesByKeyword(keyword);
+        model.addAttribute("communities", communities);
+        return "my/community";
+    }
+
 
 
 //    @GetMapping("/post_de")
