@@ -50,10 +50,10 @@ public class CommunityController {
         community.setMember(member);
         community.setC_title(form.getTitle());
         community.setC_content(form.getContent());
-        community.setC_category(form.getCategory());
+        community.setCategory(form.getCategory());
         community.setC_date(LocalDate.now());
 
-        communityService.save(community);
+        communityService.saveCommunity(community);
         return "redirect:/com";
     }
 
@@ -67,10 +67,27 @@ public class CommunityController {
 
     @GetMapping("/com_de")
     public String showComDetails(@RequestParam("id") Long comId, Model model) {
-        List<Community> communities = communityService.findByid(comId);
+        List<Community> communities = communityService.findByseq(comId);
         model.addAttribute("communities", communities);
 
         return "my/community_detail";
+    }
+
+    // 게시판 카테고리 선택
+    @GetMapping("/community")
+    public String getCommunityByCategory(@RequestParam(name = "category", required = false) String category, Model model) {
+        // 카테고리가 지정되지 않았을 때 전체 목록을 가져옵니다.
+        List<Community> communities;
+
+        if (category == null || category.isEmpty()) {
+            communities = communityService.getAllCommunities();
+        } else {
+            // 특정 카테고리의 게시물만 가져옵니다.
+            communities = communityService.getCommunitiesByCategory(category);
+        }
+
+        model.addAttribute("communities", communities);
+        return "my/community";
     }
 
 

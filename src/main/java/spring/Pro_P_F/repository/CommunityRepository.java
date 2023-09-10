@@ -1,33 +1,18 @@
 package spring.Pro_P_F.repository;
-
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import spring.Pro_P_F.domain.Community;
-import spring.Pro_P_F.domain.Posting;
 
-import javax.persistence.EntityManager;
 import java.util.List;
 
-@Repository
-@RequiredArgsConstructor
-public class CommunityRepository {
-
-    private final EntityManager em;
-
+public interface CommunityRepository extends JpaRepository<Community, Long> {
     // 커뮤니티 글 등록
-    public void save(Community community) {
-        em.persist(community);
-    }
+    // JpaRepository를 확장하므로 save 메서드는 이미 제공됩니다.
 
-    // 커뮤니티 전체 글 목록
-    public List<Community> findAll() {
-        return em.createQuery("select comm from Community comm", Community.class)
-                .getResultList();
-    }
+    // 커뮤니티 전체 글 목록 조회
+    List<Community> findAll();
 
-    public List<Community> findByid(Long id) {
-        return em.createQuery("select c from Community c where c.id = :id", Community.class)
-                .setParameter("id", id)
-                .getResultList();
-    }
+    // ID로 커뮤니티 글 조회
+    List<Community> findByseq(Long cSeq);
+
+    List<Community> findByCategory(String category);
 }

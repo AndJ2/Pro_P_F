@@ -12,13 +12,15 @@ import java.time.LocalDate;
 public class Community {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long c_seq;
+    @Column(name = "c_seq")
+    private Long seq;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "m_id")
     private Member member;
 
-    private String c_category;
+    @Column(name = "c_category")
+    private String category;
     private String c_title;
     private String c_content;
     private int c_like;
