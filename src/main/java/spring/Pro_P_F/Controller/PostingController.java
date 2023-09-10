@@ -82,11 +82,6 @@ public class PostingController {
         return "my/mypage_other"; // 사용자 프로필 페이지로 이동하는 뷰 이름을 반환합니다.
     }
 
-    @GetMapping("/series_add")
-    public String add_series(){
-        return "my/series_add";
-    }
-
 }
 
 
