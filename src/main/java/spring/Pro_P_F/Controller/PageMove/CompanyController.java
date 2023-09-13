@@ -35,4 +35,14 @@ public class CompanyController {
     public String company_main (Model model) {
         return "home/company_index";
     }
+
+    @GetMapping("/clogin")
+    public String company_login (Model model) {
+        return "company/company_login";
+    }
+
+    @GetMapping("/cjoin")
+    public String company_join (Model model) {
+        return "company/company_join";
+    }
 }
