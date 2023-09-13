@@ -49,27 +49,14 @@ public class MemberController {
         return "home/login";
     }
 
+    // 처음 로딩 화면
     @GetMapping("/")
     public String login(Model model) {
         model.addAttribute("memberForm", new MemberForm());
         return "home/login";
     }
 
-//    @PostMapping("/login")
-//    public String loginId(MemberForm form, HttpSession session) {
-//        String mId = form.getM_id();
-//        String mPwd = form.getM_pwd();
-//
-//        if (memberService.login(mId, mPwd)) {
-//            throw new IllegalArgumentException("존재하지 않는 id입니다");
-//        } else {
-//            String memId = form.getM_id();
-//            session.setAttribute("m_id", memId);
-//
-//            return "redirect:/main";
-//        }
-//    }
-
+    // login 성공/실패
     @PostMapping("/login")
     public String loginId(MemberForm form, HttpSession session) {
         String mId = form.getM_id();

@@ -23,7 +23,7 @@ public class CompanyController {
 
     @GetMapping("/company_my")
     public String company(Model model) {
-        return "company/company-mypage";
+        return "company_mypage";
     }
 
     @GetMapping("/company_ch")
@@ -31,18 +31,5 @@ public class CompanyController {
         return "company/company_channel";
     }
 
-    @GetMapping("/cmain")
-    public String company_main (Model model) {
-        return "home/company_index";
-    }
 
-    @GetMapping("/clogin")
-    public String company_login (Model model) {
-        return "company/company_login";
-    }
-
-    @GetMapping("/cjoin")
-    public String company_join (Model model) {
-        return "company/company_join";
-    }
 }
