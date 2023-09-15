@@ -11,11 +11,6 @@ public class CompanyController {
         return "company/employ";
     }
 
-    @GetMapping("/employ_add")
-    public String Employ_add(Model model) {
-        return "company/employ_add";
-    }
-
     @GetMapping("/em_de")
     public String Employ_detail(Model model) {
         return "company/employ_detail";

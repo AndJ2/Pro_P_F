@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import spring.Pro_P_F.domain.Company;
 
 public interface CompanyMemRepository extends JpaRepository<Company, Long> {
-    Company findByCyId(String cyId);
+    public Company findByCyId(String cyId);
 }
