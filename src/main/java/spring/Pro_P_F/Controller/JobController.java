@@ -15,6 +15,7 @@ import spring.Pro_P_F.service.JobService;
 
 import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
+import java.util.List;
 
 @Controller
 public class JobController {
@@ -36,7 +37,7 @@ public class JobController {
         return "company/employ_add";
     }
 
-    // 커뮤니티 게시물 등록
+    // 공고 등록
     @PostMapping("/em_add")
     public String employ_add2(Job job1, HttpSession session) {
         try {
@@ -68,5 +69,12 @@ public class JobController {
         }
     }
 
+    // 커뮤니티 게시물 목록
+    @GetMapping("/employ")
+    public String list(Model model) {
+        List<Job> jobs = jobService.findAllComm();
+        model.addAttribute("jobs", jobs);
+        return "company/employ";
+    }
 
 }
