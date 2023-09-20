@@ -36,8 +36,9 @@
       </div>
 
       <div class="profile-user-settings">
-
         <h1 class="profile-user-name">회사명</h1>
+        <h1 class="profile-user-name" th:each="job : ${jobs}">
+          <h1 class="profile-user-name" th:text="${job.company.company_name}">회사명</h1></h1>
 
       </div>
 

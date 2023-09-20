@@ -52,7 +52,7 @@ public class CompanyMemController {
 
     // login 성공/실패
     @PostMapping("/c_login")
-    public String loginId(CompanyForm form, HttpSession session) {
+    public String loginId(CompanyForm form, HttpSession session, Model model) {
         String cyId = form.getId();
         String cyPwd = form.getPwd();
 
@@ -61,7 +61,8 @@ public class CompanyMemController {
         System.out.println("이거입니다 +" + cyId);
 
         if (company == null) {
-            throw new IllegalArgumentException("존재하지 않는 id입니다");
+            model.addAttribute("errorMessage", "존재하지 않는 아이디입니다");
+            return "company/company_login";
         } else {
             // 회원이 존재하면 비밀번호를 확인합니다.
             if (company.getCy_pwd().equals(cyPwd)) {
@@ -69,8 +70,9 @@ public class CompanyMemController {
                 session.setAttribute("cy_id", cyId);
                 return "redirect:/c_main";
             } else {
-                // 비밀번호가 일치하지 않는 경우 예외를 던지거나 에러 메시지를 처리할 수 있습니다.
-                throw new IllegalArgumentException("비밀번호가 일치하지 않습니다");
+                // 비밀번호가 일치하지 않는 경우 에러 메시지를 처리할 수 있습니다.
+                model.addAttribute("errorMessage", "비밀번호가 일치하지 않습니다");
+                return "company/company_login";
             }
         }
     }

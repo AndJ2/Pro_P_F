@@ -58,7 +58,7 @@ public class MemberController {
 
     // login 성공/실패
     @PostMapping("/login")
-    public String loginId(MemberForm form, HttpSession session) {
+    public String loginId(MemberForm form, HttpSession session, Model model) {
         String mId = form.getM_id();
         String mPwd = form.getM_pwd();
 
@@ -66,7 +66,9 @@ public class MemberController {
         Member member = memberService.findOne(mId);
 
         if (member == null) {
-            throw new IllegalArgumentException("존재하지 않는 id입니다");
+            // 사용자가 존재하지 않으면 모델에 에러 메시지를 설정합니다.
+            model.addAttribute("errorMessage", "존재하지 않는 아이디입니다");
+            return "home/login"; // 에러 메시지와 함께 로그인 페이지로 리다이렉트합니다.
         } else {
             // 회원이 존재하면 비밀번호를 확인합니다.
             if (member.getM_pwd().equals(mPwd)) {
@@ -74,12 +76,12 @@ public class MemberController {
                 session.setAttribute("m_id", mId);
                 return "redirect:/main";
             } else {
-                // 비밀번호가 일치하지 않는 경우 예외를 던지거나 에러 메시지를 처리할 수 있습니다.
-                throw new IllegalArgumentException("비밀번호가 일치하지 않습니다");
+                // 비밀번호가 일치하지 않는 경우 모델에 에러 메시지를 설정합니다.
+                model.addAttribute("errorMessage", "비밀번호가 일치하지 않습니다");
+                return "home/login"; // 에러 메시지와 함께 로그인 페이지로 리다이렉트합니다.
             }
         }
     }
-
 
     @GetMapping("/main")
     public String mainHome(HttpSession session, Model model) {
