@@ -92,12 +92,14 @@
                         <input type="text" th:field="*{title}" placeholder="제목" maxlength="100">
                     </div>
                     <div class="col-md-4 input-field">
-                        <select id="category" name="category" th:field="*{series}">
-                            <option value="카테고리1">카테고리1</option>
-                            <option value="카테고리2">카테고리2</option>
-                            <option value="카테고리3">카테고리3</option>
-                            <!-- 필요한 만큼 카테고리 옵션을 추가합니다. -->
+                        <select id="category" name="category" th:field="*{series.name}">
+                            <option value="">카테고리 선택</option>
+                            <option th:each="category : ${categories}"
+                                    th:value="${category.name}"
+                                    th:text="${category.name}">
+                            </option>
                         </select>
+
                     </div>
                </div>
                 <input type="hidden" th:field="*{content}" id="postContent" />

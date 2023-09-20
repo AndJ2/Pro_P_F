@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import spring.Pro_P_F.Controller.Form.PostForm;
 import spring.Pro_P_F.domain.Member;
 import spring.Pro_P_F.domain.Posting;
+import spring.Pro_P_F.domain.Series;
 import spring.Pro_P_F.service.MemberService;
 import spring.Pro_P_F.service.PostingService;
+import spring.Pro_P_F.service.SeriesService;
 
 import javax.servlet.http.HttpSession;
 import java.time.LocalDate;
@@ -25,10 +27,17 @@ public class PostingController {
     @Autowired
     private PostingService postingService;
 
+    @Autowired
+    private SeriesService seriesService;
+
     // 포스팅 등록 페이지 로드
     @GetMapping("/upload")
     public String upload(Model model) {
         model.addAttribute("postForm", new PostForm());
+
+        List<Series> categories = seriesService.getAllSeries(); // 카테고리 목록을 DB에서 가져옴
+        model.addAttribute("categories", categories); // Thymeleaf로 카테고리 목록 전달
+
 
         return "my/upload";
     }
@@ -42,12 +51,17 @@ public class PostingController {
 
         Member member = memberService.findOne(mId);
 
+        String seriesName = form.getSeries().getName(); // 선택한 시리즈의 이름
+        Series series = seriesService.findByName(seriesName);
+
+
         Posting posting = new Posting();
 
         posting.setMember(member);
         posting.setP_title(form.getTitle());
         posting.setP_content(form.getContent());
         posting.setP_date(LocalDate.now());
+        posting.setSeries(series);
 
         postingService.save(posting);
         return "redirect:/post";

@@ -35,7 +35,7 @@ public class SeriesService {
         LocalDate currentDate = LocalDate.now();
 
         Series series = new Series();
-        series.setS_name(seriesName);
+        series.setName(seriesName);
         series.setS_date(currentDate);
 
         String mId = (String) session.getAttribute("m_id");
@@ -51,10 +51,13 @@ public class SeriesService {
         Optional<Series> optionalSeries = seriesRepository.findById(seriesId);
         if (optionalSeries.isPresent()) {
             Series series = optionalSeries.get();
-            series.setS_name(seriesName);
+            series.setName(seriesName);
             seriesRepository.save(series);
         }
     }
 
-    // 다른 메서드 (시리즈 삭제, 시리즈 조회 등)도 추가 가능
+    // 시리즈 이름으로 시리즈 엔티티를 찾는 메서드
+    public Series findByName(String s_name) {
+        return seriesRepository.findByName(s_name);
+    }
 }

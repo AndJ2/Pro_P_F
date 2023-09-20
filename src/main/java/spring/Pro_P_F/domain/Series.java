@@ -19,7 +19,8 @@ public class Series {
     @JoinColumn(name = "m_id")
     private Member member;
 
-    private String s_name;
+    @Column(name = "s_name")
+    private String name;
 
     @LastModifiedDate
     private LocalDate s_date;

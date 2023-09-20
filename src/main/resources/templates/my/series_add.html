@@ -37,7 +37,7 @@
     <!-- 시리즈 목록 표시 -->
     <ul th:each="series : ${seriesList}">
         <li>
-            <span th:text="${series.s_name}"></span>
+            <span th:text="${series.name}"></span>
             <!-- 수정 버튼 클릭 시 시리즈 수정 폼 나타남 -->
             <a href="#" th:onclick="'javascript:showEditForm(\'' + ${series.s_seq} + '\');'">수정</a>
         </li>
