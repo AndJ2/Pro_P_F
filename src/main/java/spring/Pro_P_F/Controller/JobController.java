@@ -6,10 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.Pro_P_F.Controller.Form.CommunityForm;
-import spring.Pro_P_F.domain.Community;
-import spring.Pro_P_F.domain.Company;
-import spring.Pro_P_F.domain.Job;
-import spring.Pro_P_F.domain.Member;
+import spring.Pro_P_F.domain.*;
 import spring.Pro_P_F.service.CompanyMemService;
 import spring.Pro_P_F.service.JobService;
 
@@ -69,12 +66,31 @@ public class JobController {
         }
     }
 
-    // 커뮤니티 게시물 목록
+    // 공고 목록
+//    @GetMapping("/employ")
+//    public String list(Model model) {
+//        List<Job> jobs = jobService.findAllComm();
+//        model.addAttribute("jobs", jobs);
+//        return "company/employ";
+//    }
+
     @GetMapping("/employ")
-    public String list(Model model) {
+    public String yourPage(Model model) {
         List<Job> jobs = jobService.findAllComm();
         model.addAttribute("jobs", jobs);
+
+        // 열거형(enum) 값을 가져와서 모델에 추가
+        WorkType[] workCategories = WorkType.values();
+        model.addAttribute("workCategories", workCategories);
+
+        EmployType[] employCategories = EmployType.values();
+        model.addAttribute("employCategories", employCategories);
+
+        AreaType[] areaTypes = AreaType.values();
+        model.addAttribute("areaTypes", areaTypes);
+
         return "company/employ";
     }
+
 
 }

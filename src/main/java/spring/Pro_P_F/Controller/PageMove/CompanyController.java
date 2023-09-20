@@ -31,8 +31,10 @@ public class CompanyController {
         String cyId = (String) session.getAttribute("cy_id");
         System.out.println("공고 불러오는 cy_id = " + cyId);
 
-
         Company company = companyMemService.findMemByCyId(cyId);
+
+        model.addAttribute("company", company);
+
 
         List<Job> jobs = jobService.findByCompany(company);
         model.addAttribute("jobs", jobs);

@@ -104,5 +104,15 @@ public class MemberController {
     public String h_main(Model model) {
         return "home/index";
     }
+
+        @GetMapping("/logout")
+        public String logout(HttpSession session) {
+            // 세션을 무효화하여 로그아웃 처리
+            session.invalidate();
+
+            // 로그아웃 후 리다이렉트할 페이지를 지정합니다.
+            return "redirect:/"; // 로그인 페이지로 리다이렉트 예시
+        }
+
 }
 

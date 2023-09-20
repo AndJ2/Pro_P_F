@@ -34,10 +34,12 @@
           <div>
             <select name="work" class="category">
               <option value="all">직무 선택</option>
-              <option value="ios">ios</option>
-              <option value="android">안드로이드</option>
-              <option value="back">백엔드</option>
+              <!-- 열거형(enum) 값을 반복하며 옵션을 생성합니다 -->
+              <th:block th:each="category : ${workCategories}">
+                <option th:value="${category}" th:text="${category.getDisplayName()}"></option>
+              </th:block>
             </select>
+
           </div>
         </div>
 
@@ -45,9 +47,9 @@
           <div style="margin-right: 30px"><h3 class="title">채용 형태</h3></div>
           <select name="job" class="category">
             <option value="all">채용 형태</option>
-            <option value="in">인턴</option>
-            <option value="pro">경력직</option>
-            <option value="new">신입</option>
+            <th:block th:each="category : ${employCategories}">
+              <option th:value="${category}" th:text="${category.getDisplayName()}"></option>
+            </th:block>
           </select>
         </div>
 
@@ -55,9 +57,9 @@
           <div style="margin-right: 30px;text-align: center"><h3 class="title">근무 지역</h3></div>
           <select name="land" class="category">
             <option value="all">지역 선택</option>
-            <option value="seoul">서울</option>
-            <option value="busan">부산</option>
-            <option value="daegoo">대구</option>
+            <th:block th:each="category : ${areaTypes}">
+              <option th:value="${category}" th:text="${category.getDisplayName()}"></option>
+            </th:block>
           </select>
         </div>
 

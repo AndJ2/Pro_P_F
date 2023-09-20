@@ -62,6 +62,7 @@ public class CommunityController {
     public String list(Model model) {
         List<Community> communities = communityService.findAllComm();
         model.addAttribute("communities", communities);
+
         return "my/community";
     }
 
