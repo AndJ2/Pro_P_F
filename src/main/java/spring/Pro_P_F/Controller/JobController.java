@@ -40,8 +40,10 @@ public class JobController {
     @PostMapping("/em_add")
     public String employ_add2(Job job1, HttpSession session) {
         try {
-            String mId = (String) session.getAttribute("m_id");
-            Company company = companyMemService.findMemByCyId(mId);
+            String cyId = (String) session.getAttribute("cy_id");
+            System.out.println("db저장 cy_id = " + cyId);
+            Company company = companyMemService.findMemByCyId(cyId);
+            System.out.println("실제 저장 값 cy_id = " + company);
 
             Job job = new Job();
 

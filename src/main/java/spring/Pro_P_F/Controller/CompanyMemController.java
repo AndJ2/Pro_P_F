@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import spring.Pro_P_F.Controller.Form.CompanyForm;
-import spring.Pro_P_F.Controller.Form.MemberForm;
 import spring.Pro_P_F.domain.Company;
 import spring.Pro_P_F.domain.Posting;
 import spring.Pro_P_F.service.CompanyMemService;
