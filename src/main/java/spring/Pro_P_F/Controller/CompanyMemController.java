@@ -89,10 +89,6 @@ public class CompanyMemController {
         return "home/company_index";
     }
 
-    @GetMapping("/c_pofo")
-    public String company_mypage (Model model) {
-        return "company/company_mypage";
-    }
 
 }
 

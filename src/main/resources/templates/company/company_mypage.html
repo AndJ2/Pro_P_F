@@ -83,12 +83,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>IOS 개발자 구함둥</td>
-              <td>경력 </td>
-              <td>카카오</td>
-              <td>서울</td>
-              <td>~ 4/30</td>
+            <tr th:each="job : ${jobs}">
+              <td th:text="${job.title}">IOS 개발자 구함둥</td>
+              <td th:text="${job.employ}">경력 </td>
+              <td th:text="${job.company.company_name}">카카오</td>
+              <td th:text="${job.area}">서울</td>
+              <td th:text="${job.start_date}"></td>
+              <td th:text="${job.end_date}">~ 4/30</td>
               <th>
                 <div class="text-center">
                   <button type="submit">수정</button>
